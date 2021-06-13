@@ -53,7 +53,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2Button1.Animated = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 16;
+            this.guna2Button1.BorderRadius = 20;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -66,10 +66,11 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.IndicateFocus = true;
-            this.guna2Button1.Location = new System.Drawing.Point(850, -3);
+            this.guna2Button1.Location = new System.Drawing.Point(1133, -4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(49, 35);
+            this.guna2Button1.Size = new System.Drawing.Size(65, 43);
             this.guna2Button1.TabIndex = 31;
             this.guna2Button1.Text = "X";
             this.guna2Button1.UseTransparentBackground = true;
@@ -81,9 +82,10 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(587, 483);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(783, 594);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(159, 21);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(212, 26);
             this.guna2HtmlLabel6.TabIndex = 29;
             this.guna2HtmlLabel6.Text = "Bạn chưa có tài khoản ?";
             // 
@@ -92,8 +94,9 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BorderRadius = 21;
+            this.btnLogin.BorderRadius = 26;
             this.btnLogin.CheckedState.Parent = this.btnLogin;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.CustomImages.Parent = this.btnLogin;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -105,10 +108,11 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Parent = this.btnLogin;
             this.btnLogin.IndicateFocus = true;
-            this.btnLogin.Location = new System.Drawing.Point(637, 408);
+            this.btnLogin.Location = new System.Drawing.Point(849, 502);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(180, 45);
+            this.btnLogin.Size = new System.Drawing.Size(240, 55);
             this.btnLogin.TabIndex = 28;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseTransparentBackground = true;
@@ -120,11 +124,12 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(666, 361);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(940, 444);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(145, 21);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(193, 26);
             this.guna2HtmlLabel5.TabIndex = 27;
-            this.guna2HtmlLabel5.Text = "Keep Me Login";
+            this.guna2HtmlLabel5.Text = "Ghi nhớ tôi";
             // 
             // ckRemember
             // 
@@ -134,10 +139,11 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.ckRemember.CheckedState.BorderThickness = 0;
             this.ckRemember.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
             this.ckRemember.CheckedState.Parent = this.ckRemember;
-            this.ckRemember.Location = new System.Drawing.Point(642, 361);
+            this.ckRemember.Location = new System.Drawing.Point(908, 444);
+            this.ckRemember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ckRemember.Name = "ckRemember";
             this.ckRemember.ShadowDecoration.Parent = this.ckRemember;
-            this.ckRemember.Size = new System.Drawing.Size(20, 20);
+            this.ckRemember.Size = new System.Drawing.Size(27, 25);
             this.ckRemember.TabIndex = 26;
             this.ckRemember.Text = "guna2CustomCheckBox1";
             this.ckRemember.UncheckedState.BorderColor = System.Drawing.Color.Black;
@@ -155,7 +161,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtPassword.BackColor = System.Drawing.Color.Transparent;
-            this.txtPassword.BorderRadius = 20;
+            this.txtPassword.BorderRadius = 25;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -168,13 +174,14 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(615, 300);
+            this.txtPassword.Location = new System.Drawing.Point(820, 369);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "Type Your Password";
+            this.txtPassword.PlaceholderText = "Mật Khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(221, 42);
+            this.txtPassword.Size = new System.Drawing.Size(295, 52);
             this.txtPassword.TabIndex = 25;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
@@ -189,7 +196,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtUserName.AutoRoundedCorners = true;
             this.txtUserName.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtUserName.BackColor = System.Drawing.Color.Transparent;
-            this.txtUserName.BorderRadius = 20;
+            this.txtUserName.BorderRadius = 25;
             this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.DefaultText = "";
             this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -202,14 +209,14 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserName.HoverState.Parent = this.txtUserName;
-            this.txtUserName.Location = new System.Drawing.Point(615, 234);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserName.Location = new System.Drawing.Point(820, 288);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
-            this.txtUserName.PlaceholderText = "Type Your Username";
+            this.txtUserName.PlaceholderText = "Tên Đăng Nhập";
             this.txtUserName.SelectedText = "";
             this.txtUserName.ShadowDecoration.Parent = this.txtUserName;
-            this.txtUserName.Size = new System.Drawing.Size(221, 43);
+            this.txtUserName.Size = new System.Drawing.Size(295, 53);
             this.txtUserName.TabIndex = 24;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -218,9 +225,10 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(587, 176);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(783, 210);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(262, 21);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(326, 26);
             this.guna2HtmlLabel1.TabIndex = 23;
             this.guna2HtmlLabel1.Text = "Hãy Bắt Đầu Bằng Cách Đăng Nhập Nào";
             // 
@@ -230,20 +238,22 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(125, 277);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(167, 341);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(329, 92);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(439, 113);
             this.guna2HtmlLabel2.TabIndex = 20;
-            this.guna2HtmlLabel2.Text = "Chào mừng bạn đến với ứng dụng quản lý shop, chúc bạn có trải nghiệm tốt nhất.";
+            this.guna2HtmlLabel2.Text = "Chào mừng bạn đến với ứng dụng quản lý shop, chúc bạn có trải nghiệm tốt nhất.\r\n";
             // 
             // slogan
             // 
             this.slogan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
             this.slogan.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slogan.ForeColor = System.Drawing.Color.White;
-            this.slogan.Location = new System.Drawing.Point(177, 158);
+            this.slogan.Location = new System.Drawing.Point(236, 194);
+            this.slogan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slogan.Name = "slogan";
-            this.slogan.Size = new System.Drawing.Size(115, 39);
+            this.slogan.Size = new System.Drawing.Size(143, 48);
             this.slogan.TabIndex = 19;
             this.slogan.Text = "Rose-Shop ";
             // 
@@ -251,11 +261,12 @@ namespace QuanLyBanHang.DTO.UIAuth
             // 
             this.guna2CirclePictureBox2.Image = global::QuanLyBanHang.Properties.Resources.user1;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(666, 72);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(888, 83);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(99, 87);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(132, 107);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox2.TabIndex = 22;
             this.guna2CirclePictureBox2.TabStop = false;
@@ -264,9 +275,10 @@ namespace QuanLyBanHang.DTO.UIAuth
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
             this.pictureBox1.Image = global::QuanLyBanHang.Properties.Resources.rose_shape;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 158);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 194);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -278,10 +290,11 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Brand.Image = global::QuanLyBanHang.Properties.Resources.circle;
             this.Brand.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             this.Brand.ImageRotate = 120F;
-            this.Brand.Location = new System.Drawing.Point(-212, -72);
+            this.Brand.Location = new System.Drawing.Point(-267, -95);
+            this.Brand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Brand.Name = "Brand";
             this.Brand.ShadowDecoration.Parent = this.Brand;
-            this.Brand.Size = new System.Drawing.Size(767, 694);
+            this.Brand.Size = new System.Drawing.Size(1023, 854);
             this.Brand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Brand.TabIndex = 18;
             this.Brand.TabStop = false;
@@ -295,9 +308,10 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.lblResigter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic);
             this.lblResigter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
             this.lblResigter.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(51)))));
-            this.lblResigter.Location = new System.Drawing.Point(751, 483);
+            this.lblResigter.Location = new System.Drawing.Point(1001, 594);
+            this.lblResigter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResigter.Name = "lblResigter";
-            this.lblResigter.Size = new System.Drawing.Size(98, 19);
+            this.lblResigter.Size = new System.Drawing.Size(122, 24);
             this.lblResigter.TabIndex = 32;
             this.lblResigter.TabStop = true;
             this.lblResigter.Text = "Đăng ký Ngay";
@@ -306,10 +320,10 @@ namespace QuanLyBanHang.DTO.UIAuth
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(890, 561);
+            this.ClientSize = new System.Drawing.Size(1187, 690);
             this.Controls.Add(this.lblResigter);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -325,6 +339,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Controls.Add(this.slogan);
             this.Controls.Add(this.Brand);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
