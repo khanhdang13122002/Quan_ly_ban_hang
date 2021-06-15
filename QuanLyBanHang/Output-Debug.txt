@@ -1,0 +1,61 @@
+﻿'QuanLyBanHang.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\IT\dot_net\winform\projects\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe'. Symbols loaded.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\IT\dot_net\winform\projects\QuanLyBanHang\bin\Debug\EntityFramework.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\IT\dot_net\winform\projects\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\IT\dot_net\winform\projects\QuanLyBanHang\bin\Debug\Guna.UI2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+The thread 0x2218 has exited with code 0 (0x0).
+The thread 0x1b14 has exited with code 0 (0x0).
+The thread 0x1b50 has exited with code 0 (0x0).
+The thread 0x988 has exited with code 0 (0x0).
+The thread 0x19e4 has exited with code 0 (0x0).
+The thread 0x1dec has exited with code 0 (0x0).
+The thread 0x4fc has exited with code 0 (0x0).
+The thread 0x1330 has exited with code 0 (0x0).
+The thread 0xc84 has exited with code 0 (0x0).
+The thread 0x11c has exited with code 0 (0x0).
+The thread 0x2318 has exited with code 0 (0x0).
+The thread 0x11b8 has exited with code 0 (0x0).
+The thread 0x660 has exited with code 0 (0x0).
+The thread 0xe3c has exited with code 0 (0x0).
+The thread 0x118c has exited with code 0 (0x0).
+The thread 0x23d4 has exited with code 0 (0x0).
+The thread 0x13f4 has exited with code 0 (0x0).
+The thread 0x1a5c has exited with code 0 (0x0).
+The thread 0x1860 has exited with code 0 (0x0).
+The thread 0x538 has exited with code 0 (0x0).
+The thread 0xd50 has exited with code 0 (0x0).
+The thread 0x22a4 has exited with code 0 (0x0).
+The thread 0x141c has exited with code 0 (0x0).
+The thread 0x2340 has exited with code 0 (0x0).
+The thread 0x15d4 has exited with code 0 (0x0).
+The thread 0x23fc has exited with code 0 (0x0).
+The thread 0x23c8 has exited with code 0 (0x0).
+The thread 0x195c has exited with code 0 (0x0).
+The thread 0x1088 has exited with code 0 (0x0).
+The thread 0x1b70 has exited with code 0 (0x0).
+The thread 0x1e98 has exited with code 0 (0x0).
+The thread 0x1230 has exited with code 0 (0x0).
+The thread 0x23f4 has exited with code 0 (0x0).
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data.OracleClient\v4.0_4.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'EntityFrameworkDynamicProxies-QuanLyBanHang'. 
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'QuanLyBanHang.exe' (CLR v4.0.30319: QuanLyBanHang.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+The thread 0x1a20 has exited with code 0 (0x0).
+The thread 0xf1c has exited with code 0 (0x0).
+The thread 0x1da4 has exited with code 0 (0x0).
+The thread 0x630 has exited with code 0 (0x0).
+The thread 0x10d0 has exited with code 0 (0x0).
+The program '[7980] QuanLyBanHang.exe' has exited with code 0 (0x0).

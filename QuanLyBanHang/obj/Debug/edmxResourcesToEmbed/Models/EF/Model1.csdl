@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Auth">
+    <Key>
+      <PropertyRef Name="authId" />
+    </Key>
+    <Property Name="authId" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="password_" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Auth_Users" FromRole="Auth" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="Self.FK_products_category" FromRole="category" ToRole="products" />
+  </EntityType>
+  <EntityType Name="filter">
+    <Key>
+      <PropertyRef Name="fiterId" />
+    </Key>
+    <Property Name="tagId" Type="Int32" />
+    <Property Name="productId" Type="Int32" />
+    <Property Name="fiterId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="products" Relationship="Self.FK_filter_products" FromRole="filter" ToRole="products" />
+    <NavigationProperty Name="tags" Relationship="Self.FK_filter_tags" FromRole="filter" ToRole="tags" />
+  </EntityType>
+  <EntityType Name="history">
+    <Key>
+      <PropertyRef Name="historyId" />
+    </Key>
+    <Property Name="historyId" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="isProduct" Type="Boolean" />
+    <Property Name="isOrder" Type="Boolean" />
+    <Property Name="isUser" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="order_">
+    <Key>
+      <PropertyRef Name="orderId" />
+    </Key>
+    <Property Name="orderId" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="productId" Type="Int32" />
+    <NavigationProperty Name="products" Relationship="Self.FK_order__products" FromRole="order_" ToRole="products" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_order__Users" FromRole="order_" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="productId" />
+    </Key>
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="image_" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="prices" Type="Int32" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="categoryId" Type="Int32" />
+    <Property Name="userId" Type="Int32" />
+    <NavigationProperty Name="category" Relationship="Self.FK_products_category" FromRole="products" ToRole="category" />
+    <NavigationProperty Name="filter" Relationship="Self.FK_filter_products" FromRole="products" ToRole="filter" />
+    <NavigationProperty Name="order_" Relationship="Self.FK_order__products" FromRole="products" ToRole="order_" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_products_Users" FromRole="products" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tags">
+    <Key>
+      <PropertyRef Name="tagId" />
+    </Key>
+    <Property Name="tagId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="filter" Relationship="Self.FK_filter_tags" FromRole="tags" ToRole="filter" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Address_" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Desc_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Auth" Relationship="Self.FK_Auth_Users" FromRole="Users" ToRole="Auth" />
+    <NavigationProperty Name="order_" Relationship="Self.FK_order__Users" FromRole="Users" ToRole="order_" />
+    <NavigationProperty Name="products" Relationship="Self.FK_products_Users" FromRole="Users" ToRole="products" />
+  </EntityType>
+  <Association Name="FK_Auth_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Auth" Type="Self.Auth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="Auth">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_products_category">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="products" Type="Self.products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="products">
+        <PropertyRef Name="categoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_filter_products">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="filter" Type="Self.filter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="productId" />
+      </Principal>
+      <Dependent Role="filter">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_filter_tags">
+    <End Role="tags" Type="Self.tags" Multiplicity="0..1" />
+    <End Role="filter" Type="Self.filter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tags">
+        <PropertyRef Name="tagId" />
+      </Principal>
+      <Dependent Role="filter">
+        <PropertyRef Name="tagId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_order__products">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="order_" Type="Self.order_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="productId" />
+      </Principal>
+      <Dependent Role="order_">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_order__Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="order_" Type="Self.order_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="order_">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_products_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="products" Type="Self.products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="products">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyBanHangEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auth" EntityType="Self.Auth" />
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="filter" EntityType="Self.filter" />
+    <EntitySet Name="history" EntityType="Self.history" />
+    <EntitySet Name="order_" EntityType="Self.order_" />
+    <EntitySet Name="products" EntityType="Self.products" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tags" EntityType="Self.tags" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Auth_Users" Association="Self.FK_Auth_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Auth" EntitySet="Auth" />
+    </AssociationSet>
+    <AssociationSet Name="FK_products_category" Association="Self.FK_products_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="products" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_filter_products" Association="Self.FK_filter_products">
+      <End Role="products" EntitySet="products" />
+      <End Role="filter" EntitySet="filter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_filter_tags" Association="Self.FK_filter_tags">
+      <End Role="tags" EntitySet="tags" />
+      <End Role="filter" EntitySet="filter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_order__products" Association="Self.FK_order__products">
+      <End Role="products" EntitySet="products" />
+      <End Role="order_" EntitySet="order_" />
+    </AssociationSet>
+    <AssociationSet Name="FK_order__Users" Association="Self.FK_order__Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="order_" EntitySet="order_" />
+    </AssociationSet>
+    <AssociationSet Name="FK_products_Users" Association="Self.FK_products_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="products" EntitySet="products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

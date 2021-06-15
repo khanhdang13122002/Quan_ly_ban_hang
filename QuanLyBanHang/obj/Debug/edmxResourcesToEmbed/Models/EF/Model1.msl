@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities2">
+    <EntitySetMapping Name="Auth">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.Auth">
+        <MappingFragment StoreEntitySet="Auth">
+          <ScalarProperty Name="authId" ColumnName="authId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="password_" ColumnName="password_" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="category">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="filter">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.filter">
+        <MappingFragment StoreEntitySet="filter">
+          <ScalarProperty Name="tagId" ColumnName="tagId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="fiterId" ColumnName="fiterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="history">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.history">
+        <MappingFragment StoreEntitySet="history">
+          <ScalarProperty Name="isUser" ColumnName="isUser" />
+          <ScalarProperty Name="isOrder" ColumnName="isOrder" />
+          <ScalarProperty Name="isProduct" ColumnName="isProduct" />
+          <ScalarProperty Name="historyId" ColumnName="historyId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.order_">
+        <MappingFragment StoreEntitySet="order_">
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.products">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image_" ColumnName="image_" />
+          <ScalarProperty Name="prices" ColumnName="prices" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tags">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.tags">
+        <MappingFragment StoreEntitySet="tags">
+          <ScalarProperty Name="tagId" ColumnName="tagId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Address_" ColumnName="Address_" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Desc_" ColumnName="Desc_" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
