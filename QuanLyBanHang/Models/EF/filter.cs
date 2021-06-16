@@ -18,7 +18,7 @@ namespace QuanLyBanHang.Models.EF
         public Nullable<int> productId { get; set; }
         public int fiterId { get; set; }
     
-        public virtual products products { get; set; }
-        public virtual tags tags { get; set; }
+        public virtual product product { get; set; }
+        public virtual tag tag { get; set; }
     }
 }

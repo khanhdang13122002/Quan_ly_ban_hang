@@ -1,12 +1,11 @@
-﻿using QuanLyBanHang.Models.EF;
-using System;
+﻿using System;
 using System.Linq;
-
+using QuanLyBanHang.Models.EF;
 namespace QuanLyBanHang.Models.DAO
 {
     public class AuthDAO : BaseDao
     {
-        public Users getUserById(string id)
+        public User getUserById(string id)
         {
             return db_.Users.Where(us => us.userId == int.Parse(id)).FirstOrDefault();
         }
@@ -15,7 +14,7 @@ namespace QuanLyBanHang.Models.DAO
         {
             try
             {
-                Auth user_ = db_.Auth.Where(au => au.username.Contains(username) && au.password_.Contains(password)).FirstOrDefault();
+                Auth user_ = db_.Auths.Where(au => au.username.Contains(username) && au.password_.Contains(password)).FirstOrDefault();
 
                 if (user_ != null)
                 {
@@ -41,7 +40,7 @@ namespace QuanLyBanHang.Models.DAO
         }
         public int getMaxAuthId()
         {
-            var authMax = db_.Auth.OrderByDescending(au => au.authId).FirstOrDefault();
+            var authMax = db_.Auths.OrderByDescending(au => au.authId).FirstOrDefault();
             int id = authMax.authId;
             return id;
         }
@@ -52,7 +51,7 @@ namespace QuanLyBanHang.Models.DAO
             {
                 int maxAuthId = getMaxAuthId();
                 int maxUserId = getMaxUserId();
-                Auth user_ = db_.Auth.Where(au => au.username.Contains(user)).FirstOrDefault();
+                Auth user_ = db_.Auths.Where(au => au.username.Contains(user)).FirstOrDefault();
 
                 if (user_ == null)
                 {
@@ -63,7 +62,7 @@ namespace QuanLyBanHang.Models.DAO
                         password_ = pass,
                         username = user
                     };
-                    Users us = new Users
+                    User us = new User
                     {
                         userId = maxUserId + 1,
                         UserName = user,
@@ -76,7 +75,7 @@ namespace QuanLyBanHang.Models.DAO
 
 
                     db_.Users.Add(us);
-                    db_.Auth.Add(account);
+                    db_.Auths.Add(account);
                     db_.SaveChanges();
                     return true;
 

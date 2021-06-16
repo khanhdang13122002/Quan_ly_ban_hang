@@ -13,10 +13,10 @@ namespace QuanLyBanHang.Models.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLyBanHangEntities2 : DbContext
+    public partial class QuanLyBanHangEntities3 : DbContext
     {
-        public QuanLyBanHangEntities2()
-            : base("name=QuanLyBanHangEntities2")
+        public QuanLyBanHangEntities3()
+            : base("name=QuanLyBanHangEntities3")
         {
         }
     
@@ -25,14 +25,14 @@ namespace QuanLyBanHang.Models.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Auth> Auth { get; set; }
-        public virtual DbSet<category> category { get; set; }
-        public virtual DbSet<filter> filter { get; set; }
-        public virtual DbSet<history> history { get; set; }
+        public virtual DbSet<Auth> Auths { get; set; }
+        public virtual DbSet<category> categories { get; set; }
+        public virtual DbSet<filter> filters { get; set; }
+        public virtual DbSet<history> histories { get; set; }
         public virtual DbSet<order_> order_ { get; set; }
-        public virtual DbSet<products> products { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<tags> tags { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<product> products { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<tag> tags { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

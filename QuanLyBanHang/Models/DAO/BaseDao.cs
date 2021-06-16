@@ -4,10 +4,10 @@ namespace QuanLyBanHang.Models.DAO
 {
     public class BaseDao
     {
-        protected Models.EF.QuanLyBanHangEntities2 db_;
+        protected Models.EF.QuanLyBanHangEntities3 db_;
         public BaseDao()
         {
-            db_ = new QuanLyBanHangEntities2();
+            db_ = new QuanLyBanHangEntities3();
         }
     }
 }

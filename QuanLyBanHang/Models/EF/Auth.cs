@@ -19,6 +19,6 @@ namespace QuanLyBanHang.Models.EF
         public string password_ { get; set; }
         public string username { get; set; }
     
-        public virtual Users Users { get; set; }
+        public virtual User User { get; set; }
     }
 }

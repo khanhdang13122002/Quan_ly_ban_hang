@@ -16,7 +16,7 @@ namespace QuanLyBanHang.DTO.UIProducts
     public partial class frmProductsEditor : Form
     {
         protected bool isAdd_=true;
-        public frmProductsEditor(products prd,bool isAdd)
+        public frmProductsEditor(product prd,bool isAdd)
         {
             InitializeComponent();
             if (isAdd)
@@ -53,7 +53,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             }
             return null;
         }
-        void loadData(products products)
+        void loadData(product products)
         {
             // load data to update;
         }

@@ -24,7 +24,7 @@ namespace QuanLyBanHang.Models.DAO
         }
         public int getCountHistories()
         {
-            return db_.history.Count();
+            return db_.histories.Count();
         }
        /* ham tinh toan thoi gian*/
         public int[] Time(history his)
@@ -68,7 +68,7 @@ namespace QuanLyBanHang.Models.DAO
        /*lay lich su gan nhat theo time va truong*/
         public history getLastUpdatedOfProucts()
         {
-            return db_.history.OrderByDescending(his => his.time).ThenByDescending(his => his.isProduct).FirstOrDefault();
+            return db_.histories.OrderByDescending(his => his.time).ThenByDescending(his => his.isProduct).FirstOrDefault();
         }
     }
 }

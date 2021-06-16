@@ -12,29 +12,28 @@ namespace QuanLyBanHang.Models.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public product()
         {
-            this.Auth = new HashSet<Auth>();
+            this.filters = new HashSet<filter>();
             this.order_ = new HashSet<order_>();
-            this.products = new HashSet<products>();
         }
     
-        public string Email { get; set; }
-        public string UserName { get; set; }
-        public string Address_ { get; set; }
-        public string Sdt { get; set; }
-        public byte[] Avatar { get; set; }
-        public string Desc_ { get; set; }
-        public int userId { get; set; }
+        public int productId { get; set; }
+        public string name { get; set; }
+        public byte[] image_ { get; set; }
+        public Nullable<int> prices { get; set; }
+        public string detail { get; set; }
+        public Nullable<int> categoryId { get; set; }
+        public Nullable<int> userId { get; set; }
     
+        public virtual category category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Auth> Auth { get; set; }
+        public virtual ICollection<filter> filters { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_> order_ { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<products> products { get; set; }
+        public virtual User User { get; set; }
     }
 }

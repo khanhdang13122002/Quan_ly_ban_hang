@@ -15,7 +15,7 @@ namespace QuanLyBanHang.DTO.UIProducts
 {
     public partial class UCCard : UserControl
     {
-        protected products prd;
+        protected product prd;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
        (
@@ -27,7 +27,7 @@ namespace QuanLyBanHang.DTO.UIProducts
              int nHeightEllipse
 
        );
-        public UCCard(products products)
+        public UCCard(product products)
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 6, 6));
@@ -35,7 +35,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             prd = products;
             // gọi hàm load data truyền vào 1 product khi load
         }
-        void LoadData(products products)// hd nàm này nhận 1 đối tượng product . tôi đag làm cái designn của thêm sửa xóa ( có 2 option 1 là click vào card nó sẽ hiện lên chức năng sửa có 1 nút add , nút info se có chức năng show thông tin)
+        void LoadData(product products)// hd nàm này nhận 1 đối tượng product . tôi đag làm cái designn của thêm sửa xóa ( có 2 option 1 là click vào card nó sẽ hiện lên chức năng sửa có 1 nút add , nút info se có chức năng show thông tin)
         {
             this.lblName.Text = products.name.Trim();
             this.lblPrices.Text = products.prices.ToString() + "$";
@@ -46,7 +46,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             
         }
         
-        void loadEditForm(products product)
+        void loadEditForm(product product)
         {
             frmProductsEditor frm = new frmProductsEditor(product, false);
             frm.FormClosed += new FormClosedEventHandler(frm_Closed);

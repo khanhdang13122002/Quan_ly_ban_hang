@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities2">
-    <EntitySetMapping Name="Auth">
+  <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities3">
+    <EntitySetMapping Name="Auths">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.Auth">
         <MappingFragment StoreEntitySet="Auth">
           <ScalarProperty Name="authId" ColumnName="authId" />
@@ -11,7 +11,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="category">
+    <EntitySetMapping Name="categories">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.category">
         <MappingFragment StoreEntitySet="category">
           <ScalarProperty Name="categoryId" ColumnName="categoryId" />
@@ -19,7 +19,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="filter">
+    <EntitySetMapping Name="filters">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.filter">
         <MappingFragment StoreEntitySet="filter">
           <ScalarProperty Name="tagId" ColumnName="tagId" />
@@ -28,16 +28,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="history">
+    <EntitySetMapping Name="histories">
       <EntityTypeMapping TypeName="QuanLyBanHangModel.history">
         <MappingFragment StoreEntitySet="history">
-          <ScalarProperty Name="isUser" ColumnName="isUser" />
-          <ScalarProperty Name="isOrder" ColumnName="isOrder" />
-          <ScalarProperty Name="isProduct" ColumnName="isProduct" />
           <ScalarProperty Name="historyId" ColumnName="historyId" />
           <ScalarProperty Name="userId" ColumnName="userId" />
           <ScalarProperty Name="action" ColumnName="action" />
           <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="isProduct" ColumnName="isProduct" />
+          <ScalarProperty Name="isOrder" ColumnName="isOrder" />
+          <ScalarProperty Name="isUser" ColumnName="isUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -51,7 +51,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="products">
-      <EntityTypeMapping TypeName="QuanLyBanHangModel.products">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.product">
         <MappingFragment StoreEntitySet="products">
           <ScalarProperty Name="productId" ColumnName="productId" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -64,7 +64,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagrams">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -75,7 +75,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tags">
-      <EntityTypeMapping TypeName="QuanLyBanHangModel.tags">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.tag">
         <MappingFragment StoreEntitySet="tags">
           <ScalarProperty Name="tagId" ColumnName="tagId" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -83,7 +83,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="QuanLyBanHangModel.Users">
+      <EntityTypeMapping TypeName="QuanLyBanHangModel.User">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />

@@ -92,7 +92,7 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             pnlNav(btnSetting.Top, btnSetting.Height);
         }
         void loadUserData(int user_id) {
-            Users user_ = dashDao.getUser(user_id);
+            User user_ = dashDao.getUser(user_id);
             lblUserName.Text = user_.UserName;
             if (user_.Avatar != null)
             {

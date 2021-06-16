@@ -12,17 +12,28 @@ namespace QuanLyBanHang.Models.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class category
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public category()
+        public User()
         {
+            this.Auths = new HashSet<Auth>();
+            this.order_ = new HashSet<order_>();
             this.products = new HashSet<product>();
         }
     
-        public int categoryId { get; set; }
-        public string name { get; set; }
+        public string Email { get; set; }
+        public string UserName { get; set; }
+        public string Address_ { get; set; }
+        public string Sdt { get; set; }
+        public byte[] Avatar { get; set; }
+        public string Desc_ { get; set; }
+        public int userId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Auth> Auths { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<order_> order_ { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product> products { get; set; }
     }

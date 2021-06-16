@@ -9,7 +9,7 @@ namespace QuanLyBanHang.Models.DAO
 {
     public class ProductsDAO:BaseDao
     {
-        public List<products> GetAll()
+        public List<product> GetAll()
         {
             return db_.products.ToList();
         }
