@@ -84,6 +84,18 @@
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\UIImage\Image.cs" />
+    <Compile Include="DTO\UILoading\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTO\UILoading\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\UILoading\UCLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DTO\UILoading\UCLoading.Designer.cs">
+      <DependentUpon>UCLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\UIMessage\frmError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIDashBoard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UILoading\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UILoading\UCLoading.resx">
+      <DependentUpon>UCLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIMessage\frmError.resx">
       <DependentUpon>frmError.cs</DependentUpon>
@@ -300,6 +318,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

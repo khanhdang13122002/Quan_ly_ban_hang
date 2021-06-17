@@ -16,17 +16,27 @@ namespace QuanLyBanHang.DTO.UIProducts
 {
     public partial class UCProducts : UserControl
     {
+        protected int currentPage = 1;
         protected ProductsDAO products = new ProductsDAO();
+        protected int totalRecord = 0;
+
         public UCProducts()
         {
             InitializeComponent();
-            loadProducts();
+            loadProducts(products.pages(null, currentPage));
+            loadPage();
         }
-
-        public void loadProducts()
+        public void loadPage()
         {
+            totalRecord = products.TotalRecord();
+            lblCurrentPage.Text = currentPage.ToString();
+            lblTotalPage.Text =((totalRecord / 8)+1).ToString();
+        }
+        public void loadProducts(List<product>product)
+        {
+
             /*sau nay se lam phan trang nên ông cứ để yên thôi ông chỉ cần them data bên sql sever nó sẽ tự load data ra cho ông*/
-            foreach (var item in products.GetAll())
+            foreach (var item in product)
             {
                 UCCard ucCard = new UCCard(item);
                 tblProducts.Controls.Add(ucCard);
@@ -49,12 +59,37 @@ namespace QuanLyBanHang.DTO.UIProducts
         private void frm_closed(object sender, FormClosedEventArgs e)
         {
             tblProducts.Controls.Clear();
-            loadProducts();
+            loadProducts(products.pages(null, currentPage));
         }
 
         private void UCProducts_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            totalRecord = products.TotalRecord();
+            if (currentPage - 1 > 0)
+            {
+               -- currentPage;
+                loadPage();
+                tblProducts.Controls.Clear();
+                loadProducts(products.pages(null, currentPage));
+
+            }
+            
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (currentPage - 1 < (totalRecord / 8))
+            {
+                ++ currentPage;
+                loadPage();
+                tblProducts.Controls.Clear();
+                loadProducts(products.pages(null, currentPage));
+            }
         }
     }
 }

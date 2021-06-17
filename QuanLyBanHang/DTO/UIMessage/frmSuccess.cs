@@ -36,9 +36,8 @@ namespace QuanLyBanHang.DTO.UIMessage
         public DialogResult show_(string content)
         {
             this.lblcontent.Text = content.Trim();
-            btnOK.DialogResult = DialogResult.OK;
             this.ShowDialog();
-            return btnOK.DialogResult;
+            return DialogResult.OK;
         }
 
         private void btnOK_Click(object sender, EventArgs e)

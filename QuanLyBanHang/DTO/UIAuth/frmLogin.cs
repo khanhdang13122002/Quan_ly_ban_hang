@@ -4,6 +4,10 @@ using QuanLyBanHang.Models.DAO;
 using System;
 using System.Windows.Forms;
 using QuanLyBanHang.Models.EF;
+using System.Threading.Tasks;
+using QuanLyBanHang.DTO.UILoading;
+using System.Threading;
+
 namespace QuanLyBanHang.DTO.UIAuth
 
 {
@@ -24,7 +28,12 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.ActiveControl = txtUserName;
             this.AcceptButton = btnLogin;
         }
-
+        public void AddLoad()
+        {
+            frmLoading load_ = new frmLoading();
+            load_.ShowDialog();
+        }
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -37,15 +46,20 @@ namespace QuanLyBanHang.DTO.UIAuth
             }
             else
             {
+                Thread thr = new Thread(AddLoad);
+                thr.Start();
                 Auth checkLogin = auth.login(user_name, pass_);
                 if (checkLogin!=null)
                 {
-                    msbSuccess.show_("Đăng Nhập Thành Công");
-                    showDashBoard((int)checkLogin.userId);
+                    thr.Abort();
+                    if (msbSuccess.show_("Đăng Nhập Thành Công") == DialogResult.OK) { 
+                        showDashBoard((int)checkLogin.userId);
+                    };
 
                 }
                 else
                 {
+                    thr.Abort();
                     mbsErr.show_("Đăng Nhập Thất Bại");
 
                 }

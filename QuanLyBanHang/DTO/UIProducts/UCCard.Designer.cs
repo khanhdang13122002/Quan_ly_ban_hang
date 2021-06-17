@@ -75,7 +75,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.btnInfo.HoverState.Parent = this.btnInfo;
             this.btnInfo.Image = global::QuanLyBanHang.Properties.Resources.information__2_;
             this.btnInfo.IndicateFocus = true;
-            this.btnInfo.Location = new System.Drawing.Point(171, 2);
+            this.btnInfo.Location = new System.Drawing.Point(148, 0);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.ShadowDecoration.Parent = this.btnInfo;
             this.btnInfo.Size = new System.Drawing.Size(45, 34);
@@ -85,7 +85,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             // ptbPic
             // 
             this.ptbPic.ImageRotate = 0F;
-            this.ptbPic.Location = new System.Drawing.Point(66, 15);
+            this.ptbPic.Location = new System.Drawing.Point(52, 12);
             this.ptbPic.Name = "ptbPic";
             this.ptbPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.ptbPic.ShadowDecoration.Parent = this.ptbPic;
@@ -104,7 +104,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.Controls.Add(this.ptbPic);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCCard";
-            this.Size = new System.Drawing.Size(214, 186);
+            this.Size = new System.Drawing.Size(187, 186);
             this.Load += new System.EventHandler(this.UCCard_Load);
             this.Click += new System.EventHandler(this.UCCard_Click);
             ((System.ComponentModel.ISupportInitialize)(this.ptbPic)).EndInit();
