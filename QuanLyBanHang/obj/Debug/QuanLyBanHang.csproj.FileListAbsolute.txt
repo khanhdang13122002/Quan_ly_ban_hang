@@ -48,3 +48,4 @@ D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CoreComp
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIProducts.frmProductDetail.resources

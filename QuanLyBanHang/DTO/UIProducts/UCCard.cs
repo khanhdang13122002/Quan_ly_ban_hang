@@ -27,6 +27,7 @@ namespace QuanLyBanHang.DTO.UIProducts
              int nHeightEllipse
 
        );
+
         public UCCard(product products)
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             prd = products;
             // gọi hàm load data truyền vào 1 product khi load
         }
+
         void LoadData(product products)// hd nàm này nhận 1 đối tượng product . tôi đag làm cái designn của thêm sửa xóa ( có 2 option 1 là click vào card nó sẽ hiện lên chức năng sửa có 1 nút add , nút info se có chức năng show thông tin)
         {
             this.lblName.Text = products.name.Trim();
@@ -43,7 +45,6 @@ namespace QuanLyBanHang.DTO.UIProducts
             lblName.Location = new Point((this.Width - lblName.Width) / 2, 126);
             lblPrices.Location = new Point((this.Width - lblPrices.Width) / 2, 146);
             //load data of products
-            
         }
         
         void loadEditForm(product product)
@@ -51,24 +52,26 @@ namespace QuanLyBanHang.DTO.UIProducts
             frmProductsEditor frm = new frmProductsEditor(product, false);
             frm.FormClosed += new FormClosedEventHandler(frm_Closed);
             frm.Show();
-
+            if (frm.Result)
+            {
+                LoadData(product);
+            }
         }
-
-      
 
         private void frm_Closed(object sender, FormClosedEventArgs e)
         {
             LoadData(prd);
         }
 
+        // khi click thi se goi update
         private void UCCard_Click(object sender, EventArgs e)
         { 
-            /*khi click thi se goi update*/
             //some action here.
             loadEditForm(prd);
 
         }
-    /*    chuyen byte sang image de show*/
+
+        //chuyển byte sang image để show
         public Image ByteArrayToImage(byte[] byteArr)
         {
             if (byteArr != null)
@@ -88,7 +91,15 @@ namespace QuanLyBanHang.DTO.UIProducts
 
         private void UCCard_Load(object sender, EventArgs e)
         {
+            LoadData(prd);
+        }
 
+        // hiển thị thông tin chi tiết của sp
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            frmProductDetail frm = new frmProductDetail();
+            frm.ProID = prd.productId;
+            frm.ShowDialog();
         }
     }
 }

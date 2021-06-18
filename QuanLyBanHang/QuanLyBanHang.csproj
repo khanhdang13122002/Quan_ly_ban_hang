@@ -102,6 +102,12 @@
     <Compile Include="DTO\UIMessage\frmWarning.Designer.cs">
       <DependentUpon>frmWarning.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\UIProducts\frmProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTO\UIProducts\frmProductDetail.Designer.cs">
+      <DependentUpon>frmProductDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\UIProducts\frmProductsEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIMessage\frmWarning.resx">
       <DependentUpon>frmWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UIProducts\frmProductDetail.resx">
+      <DependentUpon>frmProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIProducts\frmProductsEditor.resx">
       <DependentUpon>frmProductsEditor.cs</DependentUpon>

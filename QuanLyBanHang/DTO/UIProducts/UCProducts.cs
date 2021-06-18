@@ -20,6 +20,10 @@ namespace QuanLyBanHang.DTO.UIProducts
         public UCProducts()
         {
             InitializeComponent();
+            //loadProducts();
+        }
+        private void UCProducts_Load(object sender, EventArgs e)
+        {
             loadProducts();
         }
 
@@ -31,20 +35,16 @@ namespace QuanLyBanHang.DTO.UIProducts
                 UCCard ucCard = new UCCard(item);
                 tblProducts.Controls.Add(ucCard);
             }
-
         }
 
-        private void tblProducts_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-     /*   btn add san pham*/
+        /*btn add san pham*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmProductsEditor frm = new frmProductsEditor(null, true);
             frm.FormClosed += new FormClosedEventHandler(frm_closed);
             frm.Show();
         }
+
         /*sự kiện form closed*/
         private void frm_closed(object sender, FormClosedEventArgs e)
         {
@@ -52,7 +52,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             loadProducts();
         }
 
-        private void UCProducts_Load(object sender, EventArgs e)
+        private void tblProducts_Paint(object sender, PaintEventArgs e)
         {
 
         }
