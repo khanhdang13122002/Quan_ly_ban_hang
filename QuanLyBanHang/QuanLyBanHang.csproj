@@ -318,6 +318,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\rubbish %281%29.png" />
     <None Include="Resources\right-arrow.png" />
     <None Include="Resources\left-arrow.png" />
   </ItemGroup>

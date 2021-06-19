@@ -33,11 +33,11 @@ namespace QuanLyBanHang.DTO.UIMessage
             this.lblcontent.Location = new Point((this.Width - lblcontent.Width) / 2, 104);
             this.AcceptButton = btnOK;
         }
-        public void show_(string content)
+        public DialogResult show_(string content)
         {
             this.lblcontent.Text = content.Trim();
-            btnOK.DialogResult = DialogResult.OK;
             this.ShowDialog();
+            return DialogResult.OK;
         }
 
         private void btnOK_Click(object sender, EventArgs e)

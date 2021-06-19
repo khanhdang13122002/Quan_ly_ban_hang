@@ -31,7 +31,7 @@ namespace QuanLyBanHang.DTO.UIProducts
         {
             this.lblPrices = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             this.ptbPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPic)).BeginInit();
             this.SuspendLayout();
@@ -56,31 +56,31 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Quan Da";
             // 
-            // btnInfo
+            // btnRemove
             // 
-            this.btnInfo.Animated = true;
-            this.btnInfo.AutoRoundedCorners = true;
-            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
-            this.btnInfo.BorderRadius = 16;
-            this.btnInfo.CheckedState.Parent = this.btnInfo;
-            this.btnInfo.CustomImages.Parent = this.btnInfo;
-            this.btnInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInfo.DisabledState.Parent = this.btnInfo;
-            this.btnInfo.FillColor = System.Drawing.Color.Transparent;
-            this.btnInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.HoverState.Parent = this.btnInfo;
-            this.btnInfo.Image = global::QuanLyBanHang.Properties.Resources.information__2_;
-            this.btnInfo.IndicateFocus = true;
-            this.btnInfo.Location = new System.Drawing.Point(148, 0);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.ShadowDecoration.Parent = this.btnInfo;
-            this.btnInfo.Size = new System.Drawing.Size(45, 34);
-            this.btnInfo.TabIndex = 7;
-            this.btnInfo.UseTransparentBackground = true;
+            this.btnRemove.Animated = true;
+            this.btnRemove.AutoRoundedCorners = true;
+            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemove.BorderRadius = 16;
+            this.btnRemove.CheckedState.Parent = this.btnRemove;
+            this.btnRemove.CustomImages.Parent = this.btnRemove;
+            this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemove.DisabledState.Parent = this.btnRemove;
+            this.btnRemove.FillColor = System.Drawing.Color.Transparent;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.HoverState.Parent = this.btnRemove;
+            this.btnRemove.Image = global::QuanLyBanHang.Properties.Resources.rubbish__1_;
+            this.btnRemove.IndicateFocus = true;
+            this.btnRemove.Location = new System.Drawing.Point(148, 0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.ShadowDecoration.Parent = this.btnRemove;
+            this.btnRemove.Size = new System.Drawing.Size(45, 34);
+            this.btnRemove.TabIndex = 7;
+            this.btnRemove.UseTransparentBackground = true;
             // 
             // ptbPic
             // 
@@ -90,6 +90,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.ptbPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.ptbPic.ShadowDecoration.Parent = this.ptbPic;
             this.ptbPic.Size = new System.Drawing.Size(80, 80);
+            this.ptbPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbPic.TabIndex = 4;
             this.ptbPic.TabStop = false;
             // 
@@ -98,7 +99,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblPrices);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.ptbPic);
@@ -114,10 +115,9 @@ namespace QuanLyBanHang.DTO.UIProducts
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button btnInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPrices;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox ptbPic;
+        public Guna.UI2.WinForms.Guna2Button btnRemove;
     }
 }

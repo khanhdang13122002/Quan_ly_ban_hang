@@ -47,6 +47,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblNoteHis = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cpbProductsPercent = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,7 +59,6 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.oderPercentTimer = new System.Windows.Forms.Timer(this.components);
             this.productTimer = new System.Windows.Forms.Timer(this.components);
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -99,13 +99,13 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(18, 11);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 31);
             this.guna2HtmlLabel3.TabIndex = 2;
-            this.guna2HtmlLabel3.Text = "San Pham";
+            this.guna2HtmlLabel3.Text = "Sản Phẩm";
             // 
             // lblHis
             // 
@@ -146,13 +146,14 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(18, 11);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(120, 31);
             this.guna2HtmlLabel4.TabIndex = 2;
-            this.guna2HtmlLabel4.Text = "Nguoi Dung";
+            this.guna2HtmlLabel4.Text = "Người Dùng";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblUserHis
             // 
@@ -193,13 +194,13 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(18, 11);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(101, 31);
             this.guna2HtmlLabel7.TabIndex = 2;
-            this.guna2HtmlLabel7.Text = "Don Hang";
+            this.guna2HtmlLabel7.Text = "Đơn Hàng";
             // 
             // lblOrderHis
             // 
@@ -242,20 +243,20 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.lblNoteContent.BackColor = System.Drawing.Color.Transparent;
             this.lblNoteContent.Location = new System.Drawing.Point(18, 48);
             this.lblNoteContent.Name = "lblNoteContent";
-            this.lblNoteContent.Size = new System.Drawing.Size(54, 15);
+            this.lblNoteContent.Size = new System.Drawing.Size(148, 15);
             this.lblNoteContent.TabIndex = 5;
-            this.lblNoteContent.Text = "Some Text";
+            this.lblNoteContent.Text = "Chức Năng Chưa Hoàn Thành";
             // 
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Nunito", 15.75F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(18, 11);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(79, 31);
             this.guna2HtmlLabel10.TabIndex = 2;
-            this.guna2HtmlLabel10.Text = "Ghi Chu";
+            this.guna2HtmlLabel10.Text = "Ghi Chú";
             // 
             // lblNoteHis
             // 
@@ -279,6 +280,15 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
             this.guna2Panel5.Size = new System.Drawing.Size(327, 333);
             this.guna2Panel5.TabIndex = 4;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(18, 296);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 15);
+            this.guna2HtmlLabel1.TabIndex = 6;
+            this.guna2HtmlLabel1.Text = "Thống kê theo số liệu hiện có.";
             // 
             // cpbProductsPercent
             // 
@@ -326,7 +336,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(163, 31);
             this.guna2HtmlLabel16.TabIndex = 3;
-            this.guna2HtmlLabel16.Text = "Ty Le Giao Hang";
+            this.guna2HtmlLabel16.Text = "Tỷ Lệ Giao Hàng";
             // 
             // cpbOrderPrecent
             // 
@@ -381,7 +391,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             this.guna2HtmlLabel13.Size = new System.Drawing.Size(73, 31);
             this.guna2HtmlLabel13.TabIndex = 2;
-            this.guna2HtmlLabel13.Text = "Lich Su";
+            this.guna2HtmlLabel13.Text = "Lịch Sử";
             // 
             // lblHistories
             // 
@@ -422,15 +432,6 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             // 
             this.productTimer.Enabled = true;
             this.productTimer.Tick += new System.EventHandler(this.productTimer_Tick);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(18, 296);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 15);
-            this.guna2HtmlLabel1.TabIndex = 6;
-            this.guna2HtmlLabel1.Text = "Thong ke theo google analytics";
             // 
             // guna2PictureBox6
             // 

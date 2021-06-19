@@ -29,14 +29,63 @@ namespace QuanLyBanHang.DTO.UIProducts
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrev = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.tblProducts = new System.Windows.Forms.TableLayoutPanel();
             this.lblCurrentPage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTotalPage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrev = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
+            // 
+            // tblProducts
+            // 
+            this.tblProducts.BackColor = System.Drawing.Color.Transparent;
+            this.tblProducts.ColumnCount = 4;
+            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblProducts.Location = new System.Drawing.Point(36, 56);
+            this.tblProducts.Margin = new System.Windows.Forms.Padding(0);
+            this.tblProducts.Name = "tblProducts";
+            this.tblProducts.RowCount = 2;
+            this.tblProducts.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblProducts.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblProducts.Size = new System.Drawing.Size(796, 369);
+            this.tblProducts.TabIndex = 1;
+            this.tblProducts.Paint += new System.Windows.Forms.PaintEventHandler(this.tblProducts_Paint);
+            // 
+            // lblCurrentPage
+            // 
+            this.lblCurrentPage.AutoSize = false;
+            this.lblCurrentPage.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurrentPage.Location = new System.Drawing.Point(401, 435);
+            this.lblCurrentPage.Name = "lblCurrentPage";
+            this.lblCurrentPage.Size = new System.Drawing.Size(22, 15);
+            this.lblCurrentPage.TabIndex = 0;
+            this.lblCurrentPage.Text = "1";
+            this.lblCurrentPage.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalPage
+            // 
+            this.lblTotalPage.AutoSize = false;
+            this.lblTotalPage.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalPage.Location = new System.Drawing.Point(443, 435);
+            this.lblTotalPage.Name = "lblTotalPage";
+            this.lblTotalPage.Size = new System.Drawing.Size(31, 15);
+            this.lblTotalPage.TabIndex = 4;
+            this.lblTotalPage.Text = "12";
+            this.lblTotalPage.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(429, 435);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(8, 15);
+            this.guna2HtmlLabel1.TabIndex = 5;
+            this.guna2HtmlLabel1.Text = "/";
             // 
             // btnNext
             // 
@@ -92,8 +141,10 @@ namespace QuanLyBanHang.DTO.UIProducts
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdd.BorderRadius = 4;
+            this.btnAdd.Animated = true;
+            this.btnAdd.AutoRoundedCorners = true;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BorderRadius = 18;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
             this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -107,63 +158,16 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Image = global::QuanLyBanHang.Properties.Resources.plus;
             this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdd.IndicateFocus = true;
             this.btnAdd.Location = new System.Drawing.Point(36, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(139, 38);
             this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Them san pham";
+            this.btnAdd.Text = "Thêm Sản Phẩm";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAdd.UseTransparentBackground = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // tblProducts
-            // 
-            this.tblProducts.BackColor = System.Drawing.Color.Transparent;
-            this.tblProducts.ColumnCount = 4;
-            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblProducts.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblProducts.Location = new System.Drawing.Point(36, 56);
-            this.tblProducts.Margin = new System.Windows.Forms.Padding(0);
-            this.tblProducts.Name = "tblProducts";
-            this.tblProducts.RowCount = 2;
-            this.tblProducts.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblProducts.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblProducts.Size = new System.Drawing.Size(796, 369);
-            this.tblProducts.TabIndex = 1;
-            this.tblProducts.Paint += new System.Windows.Forms.PaintEventHandler(this.tblProducts_Paint);
-            // 
-            // lblCurrentPage
-            // 
-            this.lblCurrentPage.AutoSize = false;
-            this.lblCurrentPage.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentPage.Location = new System.Drawing.Point(401, 435);
-            this.lblCurrentPage.Name = "lblCurrentPage";
-            this.lblCurrentPage.Size = new System.Drawing.Size(22, 15);
-            this.lblCurrentPage.TabIndex = 0;
-            this.lblCurrentPage.Text = "1";
-            this.lblCurrentPage.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTotalPage
-            // 
-            this.lblTotalPage.AutoSize = false;
-            this.lblTotalPage.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalPage.Location = new System.Drawing.Point(443, 435);
-            this.lblTotalPage.Name = "lblTotalPage";
-            this.lblTotalPage.Size = new System.Drawing.Size(31, 15);
-            this.lblTotalPage.TabIndex = 4;
-            this.lblTotalPage.Text = "12";
-            this.lblTotalPage.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(429, 435);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(8, 15);
-            this.guna2HtmlLabel1.TabIndex = 5;
-            this.guna2HtmlLabel1.Text = "/";
             // 
             // UCProducts
             // 

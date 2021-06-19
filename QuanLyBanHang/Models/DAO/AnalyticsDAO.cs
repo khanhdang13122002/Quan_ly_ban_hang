@@ -68,7 +68,26 @@ namespace QuanLyBanHang.Models.DAO
        /*lay lich su gan nhat theo time va truong*/
         public history getLastUpdatedOfProucts()
         {
-            return db_.histories.OrderByDescending(his => his.time).ThenByDescending(his => his.isProduct).FirstOrDefault();
+            return db_.histories.OrderBy(his => his.time).Where(his=>his.isProduct==true).FirstOrDefault();
+        }
+        public history getLastUpdateOfUser()
+        {
+            return db_.histories.OrderBy(his => his.time).Where(his => his.isUser == true).FirstOrDefault();
+
+        }
+        public history getLastUpdateOfOrder()
+        {
+            return db_.histories.OrderBy(his => his.time).Where(his => his.isOrder == true).FirstOrDefault();
+
+        }
+        public void note()
+        {
+
+        }
+        public history getLastUpdateOfHis()
+        {
+            return db_.histories.OrderBy(his => his.time).FirstOrDefault();
+
         }
     }
 }

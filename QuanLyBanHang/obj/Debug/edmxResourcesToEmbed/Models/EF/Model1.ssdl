@@ -36,6 +36,13 @@
     <Property Name="isOrder" Type="bit" />
     <Property Name="isUser" Type="bit" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QuanLyBanHang.dbo.note' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="note">
+          <Property Name="note_id" Type="int" />
+          <Property Name="note_content" Type="varchar(max)" />
+          <Property Name="auth_id" Type="int" />
+        </EntityType>-->
   <EntityType Name="order_">
     <Key>
       <PropertyRef Name="orderId" />
@@ -121,6 +128,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'QuanLyBanHang.dbo.note' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_note_Auth" />-->
   <Association Name="FK_order__products">
     <End Role="products" Type="Self.products" Multiplicity="0..1" />
     <End Role="order_" Type="Self.order_" Multiplicity="*" />

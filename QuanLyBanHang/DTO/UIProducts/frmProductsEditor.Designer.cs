@@ -40,9 +40,8 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
-            this.ptbProductPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.ptbProductPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbProductPic)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +86,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(92, 221);
+            this.txtName.Location = new System.Drawing.Point(120, 221);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -101,22 +100,22 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Nunito SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(43, 223);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 221);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(37, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 15);
             this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "Name";
+            this.guna2HtmlLabel1.Text = "Tên Sản Phẩm";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Nunito SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(43, 264);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 264);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(37, 15);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(91, 15);
             this.guna2HtmlLabel2.TabIndex = 5;
-            this.guna2HtmlLabel2.Text = "Prices";
+            this.guna2HtmlLabel2.Text = "Giá Sản Phẩm";
             // 
             // txtPrices
             // 
@@ -134,7 +133,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.txtPrices.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrices.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrices.HoverState.Parent = this.txtPrices;
-            this.txtPrices.Location = new System.Drawing.Point(92, 262);
+            this.txtPrices.Location = new System.Drawing.Point(120, 264);
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.PasswordChar = '\0';
             this.txtPrices.PlaceholderText = "";
@@ -148,11 +147,11 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Nunito SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(42, 318);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 318);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(37, 15);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(91, 38);
             this.guna2HtmlLabel3.TabIndex = 7;
-            this.guna2HtmlLabel3.Text = "Details";
+            this.guna2HtmlLabel3.Text = "Chi Tiết Sản Phẩm";
             // 
             // txtDeitail
             // 
@@ -169,7 +168,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.txtDeitail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDeitail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeitail.HoverState.Parent = this.txtDeitail;
-            this.txtDeitail.Location = new System.Drawing.Point(92, 316);
+            this.txtDeitail.Location = new System.Drawing.Point(120, 318);
             this.txtDeitail.Name = "txtDeitail";
             this.txtDeitail.PasswordChar = '\0';
             this.txtDeitail.PlaceholderText = "";
@@ -183,11 +182,11 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Nunito SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(42, 405);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(12, 405);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 24);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(91, 24);
             this.guna2HtmlLabel4.TabIndex = 9;
-            this.guna2HtmlLabel4.Text = "Category";
+            this.guna2HtmlLabel4.Text = "Loại Sản Phẩm";
             // 
             // cbbCategory
             // 
@@ -204,7 +203,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.cbbCategory.HoverState.Parent = this.cbbCategory;
             this.cbbCategory.ItemHeight = 30;
             this.cbbCategory.ItemsAppearance.Parent = this.cbbCategory;
-            this.cbbCategory.Location = new System.Drawing.Point(116, 405);
+            this.cbbCategory.Location = new System.Drawing.Point(120, 405);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.ShadowDecoration.Parent = this.cbbCategory;
             this.cbbCategory.Size = new System.Drawing.Size(174, 36);
@@ -226,54 +225,14 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
-            this.btnAdd.Location = new System.Drawing.Point(72, 473);
+            this.btnAdd.Location = new System.Drawing.Point(143, 467);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(78, 34);
             this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.UseTransparentBackground = true;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Animated = true;
-            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemove.BorderRadius = 6;
-            this.btnRemove.CheckedState.Parent = this.btnRemove;
-            this.btnRemove.CustomImages.Parent = this.btnRemove;
-            this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRemove.DisabledState.Parent = this.btnRemove;
-            this.btnRemove.Enabled = false;
-            this.btnRemove.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.HoverState.Parent = this.btnRemove;
-            this.btnRemove.Location = new System.Drawing.Point(184, 473);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.ShadowDecoration.Parent = this.btnRemove;
-            this.btnRemove.Size = new System.Drawing.Size(78, 34);
-            this.btnRemove.TabIndex = 12;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseTransparentBackground = true;
-            // 
-            // ptbProductPic
-            // 
-            this.ptbProductPic.BackColor = System.Drawing.Color.Transparent;
-            this.ptbProductPic.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.ptbProductPic.ImageRotate = 0F;
-            this.ptbProductPic.Location = new System.Drawing.Point(116, 72);
-            this.ptbProductPic.Name = "ptbProductPic";
-            this.ptbProductPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ptbProductPic.ShadowDecoration.Parent = this.ptbProductPic;
-            this.ptbProductPic.Size = new System.Drawing.Size(105, 101);
-            this.ptbProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbProductPic.TabIndex = 0;
-            this.ptbProductPic.TabStop = false;
-            this.ptbProductPic.UseTransparentBackground = true;
-            this.ptbProductPic.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -301,6 +260,22 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.btnClose.UseTransparentBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ptbProductPic
+            // 
+            this.ptbProductPic.BackColor = System.Drawing.Color.Transparent;
+            this.ptbProductPic.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.ptbProductPic.ImageRotate = 0F;
+            this.ptbProductPic.Location = new System.Drawing.Point(116, 72);
+            this.ptbProductPic.Name = "ptbProductPic";
+            this.ptbProductPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptbProductPic.ShadowDecoration.Parent = this.ptbProductPic;
+            this.ptbProductPic.Size = new System.Drawing.Size(105, 101);
+            this.ptbProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbProductPic.TabIndex = 0;
+            this.ptbProductPic.TabStop = false;
+            this.ptbProductPic.UseTransparentBackground = true;
+            this.ptbProductPic.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
             // frmProductsEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,7 +283,6 @@ namespace QuanLyBanHang.DTO.UIProducts
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(330, 524);
             this.ControlBox = false;
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbbCategory);
             this.Controls.Add(this.guna2HtmlLabel4);
@@ -346,7 +320,6 @@ namespace QuanLyBanHang.DTO.UIProducts
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2ComboBox cbbCategory;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Button btnRemove;
         private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }

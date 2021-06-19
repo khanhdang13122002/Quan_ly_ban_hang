@@ -13,8 +13,6 @@ namespace QuanLyBanHang.DTO.UIDashBoard
     public partial class frmDashBoard : Form
     {
         protected string Active = "";
-        protected ProductsDAO prDao = new ProductsDAO();
-        protected UCProducts ucPro = new UCProducts();
         protected DashBoardDAO dashDao = new DashBoardDAO();
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -28,9 +26,11 @@ namespace QuanLyBanHang.DTO.UIDashBoard
              int nHeightEllipse
 
        );
+        int auth_id;
         public frmDashBoard(int userId)
         {
             InitializeComponent();
+            auth_id = userId;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 6, 6));
             pnlNav(btnAnalytics.Top, btnAnalytics.Height);
             loadUcAnallytics();
@@ -51,7 +51,7 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         void loadUcAnallytics()
         {
             plnContent_.Controls.Clear();
-            UCAnalytics ucAnatlytics = new UCAnalytics();
+            UCAnalytics ucAnatlytics = new UCAnalytics(auth_id);
             plnContent_.Controls.Add(ucAnatlytics);
             Active = btnAnalytics.Name;
         }
@@ -65,10 +65,11 @@ namespace QuanLyBanHang.DTO.UIDashBoard
        
         private void btnProucts_Click(object sender, EventArgs e)
         {
-            loadProduct();
+            loadProduct(null);
         }
-        public void loadProduct()
+        public void loadProduct(string key)
         {
+            UCProducts ucPro = new UCProducts(key);
             pnlNav(btnProucts.Top, btnProucts.Height);
             Active = btnProucts.Name;
             plnContent_.Controls.Clear();
@@ -127,11 +128,11 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             {
                 if (Active.Contains(btnAnalytics.Name))
                 {
-                    loadProduct();
+                    loadProduct(key);
                 }
-                if (Active.Contains(btnAnalytics.Name))
+                if (Active.Contains(btnProucts.Name))
                 {
-
+                    loadProduct(key);
                 }
                 if (Active.Contains(btnAnalytics.Name))
                 {
