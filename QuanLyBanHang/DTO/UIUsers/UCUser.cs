@@ -44,10 +44,7 @@ namespace QuanLyBanHang.DTO.UIUsers
             frmUser frm = new frmUser();
             frm.IsAdd = true;
             frm.ShowDialog();
-            if (frm.Result)
-            {
-                LoadData();
-            }
+            if (frm.Result) LoadData();
         }
 
         private void gnBtnEdit_Click(object sender, EventArgs e)
@@ -57,10 +54,7 @@ namespace QuanLyBanHang.DTO.UIUsers
             frm.IsAdd = false;
             frm.UserId = getID;
             frm.ShowDialog();
-            if (frm.Result)
-            {
-                LoadData();
-            }
+            if (frm.Result) LoadData();
         }
 
         private void gnBtnDelete_Click(object sender, EventArgs e)
