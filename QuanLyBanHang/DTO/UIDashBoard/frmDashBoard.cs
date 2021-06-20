@@ -7,6 +7,7 @@ using QuanLyBanHang.Models.EF;
 using QuanLyBanHang.DTO.UIAnalytics;
 using System.Drawing;
 using System.IO;
+using QuanLyBanHang.DTO.UIUsers;
 
 namespace QuanLyBanHang.DTO.UIDashBoard
 {
@@ -79,7 +80,9 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         {
             Active = btnUsersManager.Name;
             pnlNav(btnUsersManager.Top, btnUsersManager.Height);
-
+            UCUser uCUser = new UCUser();
+            plnContent_.Controls.Clear();
+            plnContent_.Controls.Add(uCUser);
         }
 
         private void btnHistories_Click(object sender, EventArgs e)

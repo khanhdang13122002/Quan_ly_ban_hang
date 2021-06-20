@@ -132,11 +132,24 @@
     <Compile Include="DTO\UIProducts\UCProducts.Designer.cs">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\UIUsers\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTO\UIUsers\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\UIUsers\UCUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DTO\UIUsers\UCUser.Designer.cs">
+      <DependentUpon>UCUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DAO\AnalyticsDAO.cs" />
     <Compile Include="Models\DAO\AuthDAO.cs" />
     <Compile Include="Models\DAO\BaseDao.cs" />
     <Compile Include="Models\DAO\DashBoardDAO.cs" />
     <Compile Include="Models\DAO\ProductsDAO.cs" />
+    <Compile Include="Models\DAO\UsersDAO.cs" />
     <Compile Include="Models\EF\Auth.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -217,6 +230,12 @@
     <EmbeddedResource Include="DTO\UIProducts\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UIUsers\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UIUsers\UCUser.resx">
+      <DependentUpon>UCUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -259,7 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Auth\" />
-    <Folder Include="DTO\UIUsers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\information %282%29.png" />
