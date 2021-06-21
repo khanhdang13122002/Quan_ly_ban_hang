@@ -18,21 +18,25 @@ namespace QuanLyBanHang.DTO.UIProducts
 {
     public partial class UCProducts : UserControl
     {
+        int id_;
         protected frmSuccess success = new frmSuccess();
         protected frmError error = new frmError();
         protected int currentPage = 1;
-        protected ProductsDAO products = new ProductsDAO();
         protected int totalRecord = 0;
         string key_ = "";
-        public UCProducts(string key)
+        public UCProducts(string key,int id)
         {
             InitializeComponent();
+            id_ = id;
+            ProductsDAO products = new ProductsDAO();
             key_ = key;
             loadProducts(products.pages(key, currentPage));
             loadPage();
         }
         public void loadPage()
         {
+
+            ProductsDAO products = new ProductsDAO();
             totalRecord = products.TotalRecord();
             lblCurrentPage.Text = currentPage.ToString();
             lblTotalPage.Text =((totalRecord / 8)+1).ToString();
@@ -54,12 +58,13 @@ namespace QuanLyBanHang.DTO.UIProducts
                 Label lblEmpty = new Label();
                 lblEmpty.Text = "Không Tìm Thấy Sản Phẩm Nào!..";
                 lblEmpty.Location = new Point((tblProducts.Width - lblEmpty.Width) / 2, (tblProducts.Height - lblEmpty.Height) / 2);
+                tblProducts.Controls.Add(lblEmpty);
             }
             else
             {
                 foreach (var item in product)
                 {
-                    UCCard ucCard = new UCCard(item);
+                    UCCard ucCard = new UCCard(item,id_);
                     ucCard.btnRemove.Click += new EventHandler((sender, e) => btnRemove_click(sender, e, item.productId));
                     tblProducts.Controls.Add(ucCard);
                 }
@@ -70,6 +75,9 @@ namespace QuanLyBanHang.DTO.UIProducts
         }
         public void Remove(int id)
         {
+
+            ProductsDAO products = new ProductsDAO();
+
             bool checkRemove = products.remove(id);
             if (checkRemove)
             {
@@ -99,13 +107,15 @@ namespace QuanLyBanHang.DTO.UIProducts
      /*   btn add san pham*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmProductsEditor frm = new frmProductsEditor(null, true);
+            frmProductsEditor frm = new frmProductsEditor(null, true,id_);
             frm.FormClosed += new FormClosedEventHandler(frm_closed);
             frm.Show();
         }
         /*sự kiện form closed*/
         private void frm_closed(object sender, FormClosedEventArgs e)
         {
+            ProductsDAO products = new ProductsDAO();
+
             tblProducts.Controls.Clear();
             loadProducts(products.pages(key_, currentPage));
         }
@@ -117,6 +127,8 @@ namespace QuanLyBanHang.DTO.UIProducts
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
+            ProductsDAO products = new ProductsDAO();
+
             totalRecord = products.TotalRecord();
             if (currentPage - 1 > 0)
             {
@@ -131,6 +143,8 @@ namespace QuanLyBanHang.DTO.UIProducts
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            ProductsDAO products = new ProductsDAO();
+
             if (currentPage - 1 < (totalRecord / 8))
             {
                 ++ currentPage;

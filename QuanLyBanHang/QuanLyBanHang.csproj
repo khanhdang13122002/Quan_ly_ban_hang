@@ -83,6 +83,12 @@
     <Compile Include="DTO\UIDashBoard\frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\UIHistories\UCHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DTO\UIHistories\UCHistory.Designer.cs">
+      <DependentUpon>UCHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\UIImage\Image.cs" />
     <Compile Include="DTO\UILoading\frmLoading.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,7 @@
     <Compile Include="Models\DAO\AuthDAO.cs" />
     <Compile Include="Models\DAO\BaseDao.cs" />
     <Compile Include="Models\DAO\DashBoardDAO.cs" />
+    <Compile Include="Models\DAO\hisDao.cs" />
     <Compile Include="Models\DAO\ProductsDAO.cs" />
     <Compile Include="Models\EF\Auth.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -181,6 +188,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyBanHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DTO\UIAnalytics\UCAnalytics.resx">
       <DependentUpon>UCAnalytics.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIDashBoard\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UIHistories\UCHistory.resx">
+      <DependentUpon>UCHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UILoading\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -249,6 +264,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyBanHangDataSet.xsc">
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBanHangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyBanHangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyBanHangDataSet.xss">
+      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\user1.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\rose-shape.png" />
