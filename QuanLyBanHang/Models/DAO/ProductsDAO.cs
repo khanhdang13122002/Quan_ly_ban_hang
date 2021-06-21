@@ -39,7 +39,7 @@ namespace QuanLyBanHang.Models.DAO
             {
                 if (category != null)
                 {
-                    return db_.products.Where(pr => pr.categoryId == category.categoryId).OrderBy(pr => pr.productId).Skip((page - 1) * limit).Take(limit).ToList();
+                    return db_.products.Where(pr => pr.categoryId == category.categoryId||pr.name.Contains(key)).OrderBy(pr => pr.productId).Skip((page - 1) * limit).Take(limit).ToList();
                 }
                 else
                 {
@@ -52,12 +52,13 @@ namespace QuanLyBanHang.Models.DAO
         {
             return db_.products.Count();
         }
-        public bool add(product prd)
+        public bool add(product prd,int id)
         {
             try
             {
                 db_.products.Add(prd);
                 db_.SaveChanges();
+                addHis(id, "Them San Pham", true);
                 return true;
             }catch(Exception ex)
             {
@@ -65,7 +66,7 @@ namespace QuanLyBanHang.Models.DAO
 
             }
         }
-        public bool update(product prd)
+        public bool update(product prd, int id)
         {
             var prd_ = db_.products.Where(pr => pr.productId == prd.productId).ToList();
             try
@@ -82,6 +83,8 @@ namespace QuanLyBanHang.Models.DAO
                     item.categoryId = prd.categoryId;
                 }
                 db_.SaveChanges();
+                addHis(id, "Sua San Pham", true);
+
                 return true;
             }catch(Exception ex)
             {
@@ -96,6 +99,8 @@ namespace QuanLyBanHang.Models.DAO
             {
                 db_.products.Remove(prd);
                 db_.SaveChanges();
+                addHis(id, "Xoa San Pham", true);
+
                 return true;
             }
             catch (Exception ex)
@@ -103,6 +108,32 @@ namespace QuanLyBanHang.Models.DAO
                 return false;
             }
         }
-        
+        public bool addHis(int user_id,string action_,bool isProduct_)
+        {
+            try
+            {
+                hisDao hisDao_ = new hisDao();
+                DateTime time_ = DateTime.Now;
+                int hisId = hisDao_.getMaxId();
+                history newHis = new history
+                {
+                    historyId = hisId + 1,
+                    time = time_,
+                    userId = user_id,
+                    action = action_,
+                    isProduct=isProduct_
+                };
+                bool result=hisDao_.addHis(newHis);
+                if (result)
+                {
+                    return true;
+                }
+                return false;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+          
+        }   
     }
 }

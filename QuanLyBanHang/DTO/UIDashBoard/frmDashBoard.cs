@@ -6,6 +6,7 @@ using QuanLyBanHang.Models.DAO;
 using QuanLyBanHang.Models.EF;
 using QuanLyBanHang.DTO.UIAnalytics;
 using System.Drawing;
+using QuanLyBanHang.DTO.UIHistories;
 using System.IO;
 using QuanLyBanHang.DTO.UIUsers;
 
@@ -70,7 +71,7 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         }
         public void loadProduct(string key)
         {
-            UCProducts ucPro = new UCProducts(key);
+            UCProducts ucPro = new UCProducts(key,auth_id);
             pnlNav(btnProucts.Top, btnProucts.Height);
             Active = btnProucts.Name;
             plnContent_.Controls.Clear();
@@ -89,7 +90,10 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         {
             Active = btnHistories.Name;
             pnlNav(btnHistories.Top, btnHistories.Height);
-
+            UCHistory ucHis = new UCHistory();
+            plnContent_.Controls.Clear();
+            plnContent_.Controls.Add(ucHis);
+            
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
@@ -144,7 +148,10 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             }
             else
             {
-                
+                if (Active.Contains(btnProucts.Name)) {
+                    plnContent_.Controls.Clear();
+                    loadProduct(null);
+                }
             }
         }
     }

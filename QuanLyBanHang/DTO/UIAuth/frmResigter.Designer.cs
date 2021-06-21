@@ -30,7 +30,6 @@ namespace QuanLyBanHang.DTO.UIAuth
         private void InitializeComponent()
         {
             this.txtPasswordConfirm = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnResigter = new Guna.UI2.WinForms.Guna2Button();
             this.txtPasword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,18 +38,19 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.slogan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLogin = new System.Windows.Forms.LinkLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Brand = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Brand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPasswordConfirm
@@ -79,7 +79,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtPasswordConfirm.Location = new System.Drawing.Point(625, 322);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.PasswordChar = '\0';
-            this.txtPasswordConfirm.PlaceholderText = "Confirm Your Password";
+            this.txtPasswordConfirm.PlaceholderText = "Nhập Lại Mật Khẩu";
             this.txtPasswordConfirm.SelectedText = "";
             this.txtPasswordConfirm.ShadowDecoration.Parent = this.txtPasswordConfirm;
             this.txtPasswordConfirm.Size = new System.Drawing.Size(221, 42);
@@ -87,34 +87,6 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtPasswordConfirm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPasswordConfirm.TextOffset = new System.Drawing.Point(10, 0);
             this.txtPasswordConfirm.UseSystemPasswordChar = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AutoRoundedCorners = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderRadius = 16;
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.DisabledState.Parent = this.btnClose;
-            this.btnClose.FillColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Image = global::QuanLyBanHang.Properties.Resources.cancel;
-            this.btnClose.ImageSize = new System.Drawing.Size(12, 12);
-            this.btnClose.IndicateFocus = true;
-            this.btnClose.Location = new System.Drawing.Point(853, -2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(39, 35);
-            this.btnClose.TabIndex = 46;
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2HtmlLabel6
             // 
@@ -181,7 +153,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtPasword.Location = new System.Drawing.Point(625, 258);
             this.txtPasword.Name = "txtPasword";
             this.txtPasword.PasswordChar = '\0';
-            this.txtPasword.PlaceholderText = "Type Your Password";
+            this.txtPasword.PlaceholderText = "Mật Khẩu";
             this.txtPasword.SelectedText = "";
             this.txtPasword.ShadowDecoration.Parent = this.txtPasword;
             this.txtPasword.Size = new System.Drawing.Size(221, 42);
@@ -217,7 +189,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
-            this.txtUserName.PlaceholderText = "Email Address";
+            this.txtUserName.PlaceholderText = "Tên Đăng Nhập";
             this.txtUserName.SelectedText = "";
             this.txtUserName.ShadowDecoration.Parent = this.txtUserName;
             this.txtUserName.Size = new System.Drawing.Size(221, 43);
@@ -275,6 +247,76 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLogin_LinkClicked);
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::QuanLyBanHang.Properties.Resources.id_card__1_;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(645, 207);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 19);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 51;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::QuanLyBanHang.Properties.Resources.padlock__1_;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(646, 332);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 50;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::QuanLyBanHang.Properties.Resources.padlock__1_;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(646, 267);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(24, 20);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 49;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Animated = true;
+            this.btnClose.AutoRoundedCorners = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 16;
+            this.btnClose.CheckedState.Parent = this.btnClose;
+            this.btnClose.CustomImages.Parent = this.btnClose;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.DisabledState.Parent = this.btnClose;
+            this.btnClose.FillColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.Image = global::QuanLyBanHang.Properties.Resources.cancel;
+            this.btnClose.ImageSize = new System.Drawing.Size(12, 12);
+            this.btnClose.IndicateFocus = true;
+            this.btnClose.Location = new System.Drawing.Point(853, -2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(39, 35);
+            this.btnClose.TabIndex = 46;
+            this.btnClose.UseTransparentBackground = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Image = global::QuanLyBanHang.Properties.Resources.user3;
@@ -315,48 +357,6 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Brand.TabStop = false;
             this.Brand.UseTransparentBackground = true;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::QuanLyBanHang.Properties.Resources.padlock__1_;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(646, 267);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(24, 20);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 49;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::QuanLyBanHang.Properties.Resources.padlock__1_;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(646, 332);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 50;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::QuanLyBanHang.Properties.Resources.id_card__1_;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(645, 207);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 19);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 51;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
-            // 
             // frmResigter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,12 +385,12 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Text = "frmResigter";
             this.Load += new System.EventHandler(this.frmResigter_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmResigter_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Brand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

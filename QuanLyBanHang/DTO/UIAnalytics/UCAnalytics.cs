@@ -51,24 +51,12 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         /*  chuc nang cap nhat lich su*/
         void productsHis()
         {
-            history hisProducts = analyticsDao.getLastUpdatedOfProucts();
-            int[] time_ = analyticsDao.Time(hisProducts);
-           
-            if (time_[0] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-            }
-            if (time_[1] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-            }
-            if (time_[2] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-            }
+            var his = analyticsDao.getLastUpdatedOfProucts();
+            lblHis.Text = his.time.ToString();
         }
         void usersHis()
         {
+<<<<<<< HEAD
             history usersHis= analyticsDao.getLastUpdateOfUser();
             int[] time_ = analyticsDao.Time(usersHis);
 
@@ -108,6 +96,15 @@ namespace QuanLyBanHang.DTO.UIAnalytics
                     lblOrderHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
                 }
             }
+=======
+            var his = analyticsDao.getLastUpdateOfUser();
+            lblUserHis.Text = his.time.ToString();
+        }
+        void orderHis()
+        {
+            var his = analyticsDao.getLastUpdateOfOrder();
+            lblOrderHis.Text = his.time.ToString();
+>>>>>>> a39c55cee8365e3f5d385162d893a56e0aa7845e
         }
         public void loadNote(int id) { 
         
@@ -116,6 +113,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         }
         void His()
         {
+<<<<<<< HEAD
             history His = analyticsDao.getLastUpdateOfHis();
             int[] time_ = analyticsDao.Time(His);
 
@@ -134,6 +132,10 @@ namespace QuanLyBanHang.DTO.UIAnalytics
                     lblHistories.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
                 }
             }
+=======
+            var his = analyticsDao.getLastUpdateOfHis();
+            lblHistories.Text = his.time.ToString();
+>>>>>>> a39c55cee8365e3f5d385162d893a56e0aa7845e
         }
         /*  chuc nang cap nhat lich su*/
 
