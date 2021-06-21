@@ -14,45 +14,22 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanHang.DTO.UIUsers
+namespace QuanLyBanHang.DTO.UISetting
 {
-    public partial class frmUser : Form
+    public partial class frmSetting : Form
     {
         protected frmSuccess msbSuccess = new frmSuccess();
         protected frmError mbsErr = new frmError();
 
-        private bool isAdd = true;
-        public bool IsAdd
+        private int userID;
+        public int UserID
         {
-            set
-            {
-                isAdd = value;
-            }
+            set { userID = value; }
         }
 
-        private int userId;
-        public int UserId
+        public frmSetting(int id)
         {
-            get { return userId; }
-
-            set
-            {
-                userId = value;
-            }
-        }
-
-        private bool result = false;
-        public bool Result
-        {
-            get
-            {
-                return result;
-            }
-        }
-
-        public frmUser(int id)
-        {
-            UserId = id;
+            userID = id;
             InitializeComponent();
         }
 
@@ -62,7 +39,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             if (!String.IsNullOrEmpty(data.Text))
             {
                 mark = true;
-            } else
+            }
+            else
             {
                 epError.SetError(data, "Hãy điền đầy đủ thông tin");
                 data.Focus();
@@ -82,7 +60,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             {
                 epError.SetError(data, "Email này đã tồn tại!");
                 data.Focus();
-            } else
+            }
+            else
             {
                 mark = true;
             }
@@ -100,7 +79,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             {
                 epError.SetError(data, "Email của bạn sai định dạng!");
                 data.Focus();
-            } else
+            }
+            else
             {
                 mark = true;
             }
@@ -117,6 +97,24 @@ namespace QuanLyBanHang.DTO.UIUsers
             if (!regexPhonenumber.IsMatch(phonenumber))
             {
                 epError.SetError(data, "Số điện thoại cá nhân của bạn không phù hợp!");
+                data.Focus();
+            }
+            else
+            {
+                mark = true;
+            }
+            return mark;
+        }
+
+        // kiểm tra mật khẩu nhập lại có trùng với mật khẩu mới k
+        private bool CheckConfirmPass(Guna2TextBox data)
+        {
+            bool mark = false;
+            string newPassword = txtNewPassword.Text;
+            string confirmNewPassword = txtConfirmNewPass.Text;
+            if (newPassword != confirmNewPassword)
+            {
+                epError.SetError(data, "Mật khẩu không trùng khớp");
                 data.Focus();
             } else
             {
@@ -148,122 +146,29 @@ namespace QuanLyBanHang.DTO.UIUsers
                     Image img = Image.FromStream(ms);
                     return img;
                 }
-            } else
+            }
+            else
             {
                 return null;
             }
         }
 
-        // Load form thêm hoặc form sửa
-        private void frmUser_Load(object sender, EventArgs e)
+        private void frmSetting_Load(object sender, EventArgs e)
         {
-            if (!isAdd)
+            UsersDAO dao = new UsersDAO();
+            var getUser = dao.GetSingleByID(userID);
+            if (getUser != null)
             {
-                UsersDAO dao = new UsersDAO();
-                lblTitle.Text = "Sửa Thông tin";
-                btnAdd.Text = "Sửa";
-                var info = dao.GetSingleByID(userId);
-                if (info != null)
-                {
-                    txtUserName.Text = info.UserName;
-                    txtEmail.Text = info.Email;
-                    txtAddress.Text = info.Address_;
-                    txtPhoneNumber.Text = info.Sdt;
-                    txtDesc_.Text = info.Desc_;
-                    // Avatar
-                    ptbAvatar.Image = ByteArrayToImage(info.Avatar);
-                } else
-                {
-                    this.Close();
-                }
+                txtUserName.Text = getUser.UserName;
+                txtEmail.Text = getUser.Email;
+                txtPhoneNumber.Text = getUser.Sdt;
+                txtAddress.Text = getUser.Address_;
+                txtDesc_.Text = getUser.Desc_;
+                ptbAvatar.Image = ByteArrayToImage(getUser.Avatar);
             } else
             {
-                lblTitle.Text = "Thêm người dùng";
-            }
-        }
-
-        // Hàm này lưu trữ thông tin thêm mới hoặc đc sửa
-        private User InitUser()
-        {
-            User user = new User();
-            UsersDAO dao = new UsersDAO();
-            if (isAdd)
-            {
-                int id = dao.getMaxId();
-                user.userId = id + 1;
-            }
-            user.UserName = txtUserName.Text.Trim();
-            user.Email = txtEmail.Text.Trim();
-            user.Address_ = txtAddress.Text.Trim();
-            user.Sdt = txtPhoneNumber.Text.Trim();
-            user.Desc_ = txtDesc_.Text.Trim();
-            // Avatar
-            user.Avatar = ConvertImage(ptbAvatar.Image);
-            return user;
-        }
-
-        // Thực thi update thông tin
-        private void CallUpdateFunc()
-        {
-            UsersDAO dao = new UsersDAO();
-            var getInfo = InitUser();
-            if (dao.Update(getInfo,UserId))
-            {
-                msbSuccess.show_("Sửa Thành Công");
-                result = true;
                 this.Close();
-            } else
-            {
-                mbsErr.show_("Sửa Thất Bại");
             }
-        }
-
-        // sự kiện cho nút thêm hoặc sửa
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            UsersDAO dao = new UsersDAO();
-            var getInfo = InitUser();
-            if (isAdd)
-            {
-                if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress) 
-                    && CheckEmptyData(txtPhoneNumber) && FormatEmail(txtEmail) && CheckEmail(txtEmail)
-                    && FormatPhonenumber(txtPhoneNumber))
-                {
-                    epError.Clear();
-                    if (dao.InsertNewUser(getInfo,UserId))
-                    {
-                        msbSuccess.show_("Thêm Thành Công");
-                        result = true;
-                        this.Close();
-                    } else
-                    {
-                        mbsErr.show_("Thêm Thất Bại");
-                    }
-                }
-            } else
-            {
-                User temp = dao.GetSingleByID(userId);
-                if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress)
-                    && CheckEmptyData(txtPhoneNumber) && FormatPhonenumber(txtPhoneNumber))
-                {
-                    epError.Clear();
-                    if (txtEmail.Text == temp.Email.Trim())
-                    {
-                        CallUpdateFunc();
-                    } else
-                    {
-                        if (FormatEmail(txtEmail) && CheckEmail(txtEmail))
-                        {
-                            CallUpdateFunc();
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void ptbAvatar_Click(object sender, EventArgs e)
@@ -281,9 +186,87 @@ namespace QuanLyBanHang.DTO.UIUsers
             }
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private User InitUser()
         {
+            User user = new User();
+            user.UserName = txtUserName.Text.Trim();
+            user.Email = txtEmail.Text.Trim();
+            user.Address_ = txtAddress.Text.Trim();
+            user.Sdt = txtPhoneNumber.Text.Trim();
+            user.Desc_ = txtDesc_.Text.Trim();
+            user.Avatar = ConvertImage(ptbAvatar.Image);
+            return user;
+        }
 
+        private Auth InitAuth()
+        {
+            Auth auth = new Auth();
+            auth.username = txtUserName.Text.Trim();
+            auth.password_ = txtNewPassword.Text;
+            return auth;
+        }
+
+        private void CallUpdateFunc()
+        {
+            UsersDAO dao = new UsersDAO();
+            var getInfo = InitUser();
+            if (dao.Update(getInfo, userID))
+            {
+                msbSuccess.show_("Sửa Thành Công");
+                this.Close();
+            }
+            else
+            {
+                mbsErr.show_("Sửa Thất Bại");
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            UsersDAO dao = new UsersDAO();
+            User temp = dao.GetSingleByID(userID);
+            if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress)
+                    && CheckEmptyData(txtPhoneNumber) && FormatPhonenumber(txtPhoneNumber))
+            {
+                epError.Clear();
+                if (CheckEmptyData(txtNewPassword) && CheckEmptyData(txtConfirmNewPass))
+                {
+                    if (CheckConfirmPass(txtConfirmNewPass))
+                    {
+                        epError.Clear();
+                        AuthDAO authDAO = new AuthDAO();
+                        var getAuthInfo = InitAuth();
+                        if (authDAO.Update(getAuthInfo, userID))
+                        {
+                            msbSuccess.show_("Sửa Thành Công");
+                            this.Close();
+                        }
+                        else
+                        {
+                            mbsErr.show_("Sửa Thất Bại");
+                        }
+                    }
+                } else
+                {
+                    epError.Clear();
+                    if (txtEmail.Text == temp.Email.Trim())
+                    {
+                        CallUpdateFunc();
+                    }
+                    else
+                    {
+                        if (FormatEmail(txtEmail) && CheckEmail(txtEmail))
+                        {
+                            CallUpdateFunc();
+                        }
+                    }
+                }
+            }
         }
     }
 }

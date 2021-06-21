@@ -51,63 +51,19 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         /*  chuc nang cap nhat lich su*/
         void productsHis()
         {
-            history hisProducts = analyticsDao.getLastUpdatedOfProucts();
-            int[] time_ = analyticsDao.Time(hisProducts);
-           
-            if (time_[0] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-            }
-            if (time_[1] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-            }
-            if (time_[2] >= 1)
-            {
-                lblHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-            }
+            var his = analyticsDao.getLastUpdatedOfProucts();
+            lblHis.Text = his.time.ToString();
         }
         void usersHis()
         {
-            history usersHis= analyticsDao.getLastUpdateOfUser();
-            int[] time_ = analyticsDao.Time(usersHis);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
+            history orderHis = analyticsDao.getLastUpdateOfOrder();
+            var his = analyticsDao.getLastUpdateOfUser();
+            lblUserHis.Text = his.time.ToString();
         }
         void orderHis()
         {
-            history orderHis = analyticsDao.getLastUpdateOfOrder();
-            int[] time_ = analyticsDao.Time(orderHis);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ" + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ" + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
+            var his = analyticsDao.getLastUpdateOfOrder();
+            lblOrderHis.Text = his.time.ToString();
         }
         public void loadNote(int id) { 
         
@@ -117,23 +73,8 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         void His()
         {
             history His = analyticsDao.getLastUpdateOfHis();
-            int[] time_ = analyticsDao.Time(His);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
+            var his = analyticsDao.getLastUpdateOfHis();
+            lblHistories.Text = his.time.ToString();
         }
         /*  chuc nang cap nhat lich su*/
 

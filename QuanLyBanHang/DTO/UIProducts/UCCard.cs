@@ -18,6 +18,7 @@ namespace QuanLyBanHang.DTO.UIProducts
     public partial class UCCard : UserControl
     {
         protected product prd;
+        int id_;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
        (
@@ -29,9 +30,10 @@ namespace QuanLyBanHang.DTO.UIProducts
              int nHeightEllipse
 
        );
-        public UCCard(product products)
+        public UCCard(product products,int id)
         {
             InitializeComponent();
+            id_ = id;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 6, 6));
             LoadData(products);
             prd = products;
@@ -56,7 +58,7 @@ namespace QuanLyBanHang.DTO.UIProducts
         
         void loadEditForm(product product)
         {
-            frmProductsEditor frm = new frmProductsEditor(product, false);
+            frmProductsEditor frm = new frmProductsEditor(product, false,id_);
             frm.FormClosed += new FormClosedEventHandler(frm_Closed);
             frm.Show();
 

@@ -17,14 +17,16 @@ namespace QuanLyBanHang.DTO.UIProducts
     public partial class frmProductsEditor : Form
     {
         protected bool isAdd_=true;
+        protected int id_;
         protected product product_;
         protected ProductsDAO prdDao_ = new ProductsDAO();
         protected frmSuccess success = new frmSuccess();
         protected frmError erorr = new frmError();
 
-        public frmProductsEditor(product prd,bool isAdd)
+        public frmProductsEditor(product prd,bool isAdd,int id)
         {
             InitializeComponent();
+            id_ = id;
             if (isAdd)
             {
                 lblTitle.Text = "Thêm";
@@ -112,7 +114,7 @@ namespace QuanLyBanHang.DTO.UIProducts
                 image_ = ConvertImage(ptbProductPic.Image),
                 userId = null
             };
-            bool checkAdd = prdDao_.add(prd);
+            bool checkAdd = prdDao_.add(prd,id_);
             if (checkAdd)
             {
                 success.show_("Thêm Thành Công");
@@ -134,7 +136,7 @@ namespace QuanLyBanHang.DTO.UIProducts
                 image_ = ConvertImage(ptbProductPic.Image),
                 userId = null
             };
-            bool checkUpdate = prdDao_.update(prd);
+            bool checkUpdate = prdDao_.update(prd,id_);
             if (checkUpdate)
             {
                 if (success.show_("Sửa Thành Công") == DialogResult.OK) { this.Close(); };

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using QuanLyBanHang.DTO.UILoading;
 using System.Threading;
 
+
 namespace QuanLyBanHang.DTO.UIAuth
 
 {
@@ -69,9 +70,9 @@ namespace QuanLyBanHang.DTO.UIAuth
         {
 
             frmDashBoard frmDash = new frmDashBoard(UserId);
+            frmDash.Show();
             this.Hide();
             this.Visible = false;
-            frmDash.ShowDialog();
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
