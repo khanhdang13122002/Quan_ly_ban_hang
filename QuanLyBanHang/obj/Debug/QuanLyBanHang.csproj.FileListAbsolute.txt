@@ -79,3 +79,5 @@ D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UILoading.f
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UILoading.UCLoading.resources
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIUsers.UCUser.resources
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIUsers.frmUser.resources
+C:\IT\dot_net\winform\github\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIUsers.frmUser.resources
+C:\IT\dot_net\winform\github\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIUsers.UCUser.resources
