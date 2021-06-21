@@ -47,5 +47,11 @@ namespace QuanLyBanHang.DTO.UIHistories
             hisDao hisDAO = new hisDao();
             dgvHis.DataSource = hisDAO.getAllByOrder();
         }
+
+        private void btnGetAll_Click(object sender, EventArgs e)
+        {
+            hisDao hisDAO = new hisDao();
+            dgvHis.DataSource = hisDAO.getAll();
+        }
     }
 }

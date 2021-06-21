@@ -56,6 +56,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         }
         void usersHis()
         {
+            history orderHis = analyticsDao.getLastUpdateOfOrder();
             var his = analyticsDao.getLastUpdateOfUser();
             lblUserHis.Text = his.time.ToString();
         }
@@ -71,6 +72,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         }
         void His()
         {
+            history His = analyticsDao.getLastUpdateOfHis();
             var his = analyticsDao.getLastUpdateOfHis();
             lblHistories.Text = his.time.ToString();
         }

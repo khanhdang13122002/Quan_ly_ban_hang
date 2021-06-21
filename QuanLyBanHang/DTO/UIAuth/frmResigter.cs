@@ -1,7 +1,9 @@
 ﻿using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
 using System;
+using System.Threading;
 using System.Windows.Forms;
+using QuanLyBanHang.DTO.UILoading;
 namespace QuanLyBanHang.DTO.UIAuth
 
 {
@@ -13,7 +15,14 @@ namespace QuanLyBanHang.DTO.UIAuth
         protected AuthDAO auth = new AuthDAO();
         public frmResigter()
         {
+           
             InitializeComponent();
+        }
+
+        private void AddLoad()
+        {
+            frmLoading load = new frmLoading();
+            load.ShowDialog();
         }
 
         private void frmResigter_Load(object sender, EventArgs e)
@@ -52,6 +61,8 @@ namespace QuanLyBanHang.DTO.UIAuth
             }
             else
             {
+                Thread th = new Thread(AddLoad);
+                th.Start();
                 if (pass == conf_pass)
                 {
                     bool checkRes = auth.resigter(user, pass);
@@ -59,6 +70,7 @@ namespace QuanLyBanHang.DTO.UIAuth
 
                     if (checkRes)
                     {
+                        th.Abort();
                         if (msbSuccess.show_("Đăng Ký Thành Công") == DialogResult.OK)
                         {
                             this.Close();
@@ -67,6 +79,7 @@ namespace QuanLyBanHang.DTO.UIAuth
                     }
                     else
                     {
+                        th.Abort();
                         smbError.show_("Đăng Ký Thất Bại");
 
                     }
@@ -87,6 +100,11 @@ namespace QuanLyBanHang.DTO.UIAuth
         private void frmResigter_KeyDown(object sender, KeyEventArgs e)
         {
             /*txtUserName.Focus();*/
+        }
+
+        private void Brand_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

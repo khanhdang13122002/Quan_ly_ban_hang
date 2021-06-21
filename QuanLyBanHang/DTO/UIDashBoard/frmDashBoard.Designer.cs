@@ -39,13 +39,13 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.plnNavbarTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.lblUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ptbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.plnbackground = new Guna.UI2.WinForms.Guna2Panel();
             this.plnContent_ = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHelp = new Guna.UI2.WinForms.Guna2Button();
             this.plnNavbarLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.plnNavbarTop.SuspendLayout();
@@ -257,33 +257,6 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             this.plnNavbarTop.TabIndex = 1;
             this.plnNavbarTop.Paint += new System.Windows.Forms.PaintEventHandler(this.plnNavbarTop_Paint);
             // 
-            // btnHelp
-            // 
-            this.btnHelp.Animated = true;
-            this.btnHelp.AutoRoundedCorners = true;
-            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.BorderRadius = 17;
-            this.btnHelp.CheckedState.Parent = this.btnHelp;
-            this.btnHelp.CustomImages.Parent = this.btnHelp;
-            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHelp.DisabledState.Parent = this.btnHelp;
-            this.btnHelp.FillColor = System.Drawing.Color.Transparent;
-            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHelp.ForeColor = System.Drawing.Color.White;
-            this.btnHelp.HoverState.Parent = this.btnHelp;
-            this.btnHelp.Image = global::QuanLyBanHang.Properties.Resources.information__1_1;
-            this.btnHelp.ImageSize = new System.Drawing.Size(27, 27);
-            this.btnHelp.IndicateFocus = true;
-            this.btnHelp.Location = new System.Drawing.Point(182, 5);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.ShadowDecoration.Parent = this.btnHelp;
-            this.btnHelp.Size = new System.Drawing.Size(41, 36);
-            this.btnHelp.TabIndex = 55;
-            this.btnHelp.UseTransparentBackground = true;
-            // 
             // lblUserName
             // 
             this.lblUserName.BackColor = System.Drawing.Color.Transparent;
@@ -378,6 +351,33 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             this.plnContent_.ShadowDecoration.Parent = this.plnContent_;
             this.plnContent_.Size = new System.Drawing.Size(874, 453);
             this.plnContent_.TabIndex = 0;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Animated = true;
+            this.btnHelp.AutoRoundedCorners = true;
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.BorderRadius = 17;
+            this.btnHelp.CheckedState.Parent = this.btnHelp;
+            this.btnHelp.CustomImages.Parent = this.btnHelp;
+            this.btnHelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHelp.DisabledState.Parent = this.btnHelp;
+            this.btnHelp.FillColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHelp.ForeColor = System.Drawing.Color.White;
+            this.btnHelp.HoverState.Parent = this.btnHelp;
+            this.btnHelp.Image = global::QuanLyBanHang.Properties.Resources.information__1_1;
+            this.btnHelp.ImageSize = new System.Drawing.Size(27, 27);
+            this.btnHelp.IndicateFocus = true;
+            this.btnHelp.Location = new System.Drawing.Point(182, 5);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.ShadowDecoration.Parent = this.btnHelp;
+            this.btnHelp.Size = new System.Drawing.Size(41, 36);
+            this.btnHelp.TabIndex = 55;
+            this.btnHelp.UseTransparentBackground = true;
             // 
             // frmDashBoard
             // 
