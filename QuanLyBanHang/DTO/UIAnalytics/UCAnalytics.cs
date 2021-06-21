@@ -56,47 +56,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         }
         void usersHis()
         {
-<<<<<<< HEAD
-            history usersHis= analyticsDao.getLastUpdateOfUser();
-            int[] time_ = analyticsDao.Time(usersHis);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblUserHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
-        }
-        void orderHis()
-        {
             history orderHis = analyticsDao.getLastUpdateOfOrder();
-            int[] time_ = analyticsDao.Time(orderHis);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ" + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ" + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblOrderHis.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
-=======
             var his = analyticsDao.getLastUpdateOfUser();
             lblUserHis.Text = his.time.ToString();
         }
@@ -104,7 +64,6 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         {
             var his = analyticsDao.getLastUpdateOfOrder();
             lblOrderHis.Text = his.time.ToString();
->>>>>>> a39c55cee8365e3f5d385162d893a56e0aa7845e
         }
         public void loadNote(int id) { 
         
@@ -113,29 +72,9 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         }
         void His()
         {
-<<<<<<< HEAD
             history His = analyticsDao.getLastUpdateOfHis();
-            int[] time_ = analyticsDao.Time(His);
-
-            if (time_ != null)
-            {
-                if (time_[0] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[0].ToString() + " Ngày Trước";
-                }
-                if (time_[1] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[1].ToString() + " Tháng Trước";
-                }
-                if (time_[2] >= 1)
-                {
-                    lblHistories.Text = "Cập Nhật Từ " + time_[2].ToString() + " Năm Trước";
-                }
-            }
-=======
             var his = analyticsDao.getLastUpdateOfHis();
             lblHistories.Text = his.time.ToString();
->>>>>>> a39c55cee8365e3f5d385162d893a56e0aa7845e
         }
         /*  chuc nang cap nhat lich su*/
 

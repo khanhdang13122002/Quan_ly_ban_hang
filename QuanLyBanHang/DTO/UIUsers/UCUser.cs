@@ -14,61 +14,68 @@ namespace QuanLyBanHang.DTO.UIUsers
 {
     public partial class UCUser : UserControl
     {
+        int id_;
         protected frmSuccess msbSuccess = new frmSuccess();
         protected frmError mbsErr = new frmError();
-        public UCUser()
+        public UCUser(int id,string key)
         {
+            id_ = id;
             InitializeComponent();
+            LoadData(key);
         }
         private void UCUser_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            LoadData();
         }
 
         // Load danh sách user
-        private void LoadData()
+        private void LoadData(string key)
         {
-            UsersDAO dao = new UsersDAO();
-            gnDgvUsers.DataSource = dao.GetAll();
+                UsersDAO dao = new UsersDAO();
+                gnDgvUsers.DataSource = dao.GetAll(key);
         }
 
         private void gnBtnSearch_Click(object sender, EventArgs e)
         {
-            UsersDAO dao = new UsersDAO();
-            gnDgvUsers.DataSource = dao.GetByKeyword(gnTxtKeyword.Text.Trim());
+            
         }
 
         private void gnBtnAdd_Click(object sender, EventArgs e)
         {
-            frmUser frm = new frmUser();
+            frmUser frm = new frmUser(id_);
             frm.IsAdd = true;
             frm.ShowDialog();
-            if (frm.Result) LoadData();
+            if (frm.Result) LoadData(null);
         }
 
         private void gnBtnEdit_Click(object sender, EventArgs e)
         {
-            frmUser frm = new frmUser();
+            frmUser frm = new frmUser(id_);
             int getID = (int)gnDgvUsers.CurrentRow.Cells["userId"].Value;
             frm.IsAdd = false;
             frm.UserId = getID;
             frm.ShowDialog();
-            if (frm.Result) LoadData();
+            if (frm.Result) LoadData(null);
         }
 
         private void gnBtnDelete_Click(object sender, EventArgs e)
         {
             UsersDAO dao = new UsersDAO();
             int getID = (int)gnDgvUsers.CurrentRow.Cells["userId"].Value;
-            if (dao.Delete(getID))
+            if (dao.Delete(getID,id_))
             {
                 msbSuccess.show_("Xóa Thành Công");
-                LoadData();
-            } else
+                gnDgvUsers.DataSource = dao.GetAll(null);
+            }
+            else
             {
                 mbsErr.show_("Xóa Thất Bại");
-            }     
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

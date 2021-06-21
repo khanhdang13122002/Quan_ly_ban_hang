@@ -327,7 +327,6 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Controls.Add(this.Brand);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmAuth_Load);

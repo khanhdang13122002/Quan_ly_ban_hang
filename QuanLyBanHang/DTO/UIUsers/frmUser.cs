@@ -33,6 +33,8 @@ namespace QuanLyBanHang.DTO.UIUsers
         private int userId;
         public int UserId
         {
+            get { return userId; }
+
             set
             {
                 userId = value;
@@ -48,8 +50,9 @@ namespace QuanLyBanHang.DTO.UIUsers
             }
         }
 
-        public frmUser()
+        public frmUser(int id)
         {
+            UserId = id;
             InitializeComponent();
         }
 
@@ -204,7 +207,7 @@ namespace QuanLyBanHang.DTO.UIUsers
         {
             UsersDAO dao = new UsersDAO();
             var getInfo = InitUser();
-            if (dao.Update(getInfo))
+            if (dao.Update(getInfo,UserId))
             {
                 msbSuccess.show_("Sửa Thành Công");
                 result = true;
@@ -227,7 +230,7 @@ namespace QuanLyBanHang.DTO.UIUsers
                     && FormatPhonenumber(txtPhoneNumber))
                 {
                     epError.Clear();
-                    if (dao.InsertNewUser(getInfo))
+                    if (dao.InsertNewUser(getInfo,UserId))
                     {
                         msbSuccess.show_("Thêm Thành Công");
                         result = true;
@@ -276,6 +279,11 @@ namespace QuanLyBanHang.DTO.UIUsers
                     ptbAvatar.Image = Image.FromFile(filePath);
                 }
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
