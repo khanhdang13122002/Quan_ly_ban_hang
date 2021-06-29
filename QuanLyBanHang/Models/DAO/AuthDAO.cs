@@ -1,6 +1,6 @@
-﻿using System;
+﻿using QuanLyBanHang.Models.EF;
+using System;
 using System.Linq;
-using QuanLyBanHang.Models.EF;
 namespace QuanLyBanHang.Models.DAO
 {
     public class AuthDAO : BaseDao
@@ -49,7 +49,7 @@ namespace QuanLyBanHang.Models.DAO
             int id = authMax.authId;
             return id;
         }
-       
+
         public bool resigter(string user, string pass)
         {
             try

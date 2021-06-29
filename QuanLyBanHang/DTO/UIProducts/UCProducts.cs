@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Guna.UI2.WinForms;
+﻿using QuanLyBanHang.DTO.UILoading;
+using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
 using QuanLyBanHang.Models.EF;
-using QuanLyBanHang.DTO.UILoading;
-using QuanLyBanHang.DTO.UIMessage;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 namespace QuanLyBanHang.DTO.UIProducts
 {
     public partial class UCProducts : UserControl
@@ -24,7 +18,7 @@ namespace QuanLyBanHang.DTO.UIProducts
         protected int currentPage = 1;
         protected int totalRecord = 0;
         string key_ = "";
-        public UCProducts(string key,int id)
+        public UCProducts(string key, int id)
         {
             InitializeComponent();
             id_ = id;
@@ -39,20 +33,20 @@ namespace QuanLyBanHang.DTO.UIProducts
             ProductsDAO products = new ProductsDAO();
             totalRecord = products.TotalRecord();
             lblCurrentPage.Text = currentPage.ToString();
-            lblTotalPage.Text =((totalRecord / 8)+1).ToString();
+            lblTotalPage.Text = ((totalRecord / 8) + 1).ToString();
         }
         public void showLoading()
         {
             frmLoading loading = new frmLoading();
             loading.ShowDialog();
         }
-        public void loadProducts(List<product>product)
+        public void loadProducts(List<product> product)
         {
             Thread thr = new Thread(showLoading);
             thr.Start();
-            if (product?.Any()!=true)
+            if (product?.Any() != true)
             {
-              
+
 
                 tblProducts.Controls.Clear();
                 Label lblEmpty = new Label();
@@ -64,13 +58,13 @@ namespace QuanLyBanHang.DTO.UIProducts
             {
                 foreach (var item in product)
                 {
-                    UCCard ucCard = new UCCard(item,id_);
+                    UCCard ucCard = new UCCard(item, id_);
                     ucCard.btnRemove.Click += new EventHandler((sender, e) => btnRemove_click(sender, e, item.productId));
                     tblProducts.Controls.Add(ucCard);
                 }
             }
             /*sau nay se lam phan trang nên ông cứ để yên thôi ông chỉ cần them data bên sql sever nó sẽ tự load data ra cho ông*/
-            
+
             thr.Abort();
         }
         public void Remove(int id)
@@ -81,7 +75,7 @@ namespace QuanLyBanHang.DTO.UIProducts
             bool checkRemove = products.remove(id);
             if (checkRemove)
             {
-                if(success.show_("Xóa Thành Công!") == DialogResult.OK)
+                if (success.show_("Xóa Thành Công!") == DialogResult.OK)
                 {
                     ProductsDAO prdDao_ = new ProductsDAO();
                     tblProducts.Controls.Clear();
@@ -93,10 +87,10 @@ namespace QuanLyBanHang.DTO.UIProducts
                 error.show_("Xóa Thất Bại!");
             }
         }
-        
-        private void btnRemove_click(object sender, EventArgs e,int id)
+
+        private void btnRemove_click(object sender, EventArgs e, int id)
         {
-            
+
             Remove(id);
         }
 
@@ -104,10 +98,10 @@ namespace QuanLyBanHang.DTO.UIProducts
         {
 
         }
-     /*   btn add san pham*/
+        /*   btn add san pham*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmProductsEditor frm = new frmProductsEditor(null, true,id_);
+            frmProductsEditor frm = new frmProductsEditor(null, true, id_);
             frm.FormClosed += new FormClosedEventHandler(frm_closed);
             frm.Show();
         }
@@ -132,13 +126,13 @@ namespace QuanLyBanHang.DTO.UIProducts
             totalRecord = products.TotalRecord();
             if (currentPage - 1 > 0)
             {
-               -- currentPage;
+                --currentPage;
                 loadPage();
                 tblProducts.Controls.Clear();
                 loadProducts(products.pages(key_, currentPage));
 
             }
-            
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -147,7 +141,7 @@ namespace QuanLyBanHang.DTO.UIProducts
 
             if (currentPage - 1 < (totalRecord / 8))
             {
-                ++ currentPage;
+                ++currentPage;
                 loadPage();
                 tblProducts.Controls.Clear();
                 loadProducts(products.pages(key_, currentPage));

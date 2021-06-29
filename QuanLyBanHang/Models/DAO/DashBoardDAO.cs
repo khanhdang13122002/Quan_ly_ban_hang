@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using QuanLyBanHang.Models.EF;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyBanHang.Models.EF;
 
 namespace QuanLyBanHang.Models.DAO
 {
-   public class DashBoardDAO:BaseDao
+    public class DashBoardDAO : BaseDao
     {
         public User getUser(int user_id)
         {

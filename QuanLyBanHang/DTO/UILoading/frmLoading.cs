@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UILoading
@@ -37,11 +30,11 @@ namespace QuanLyBanHang.DTO.UILoading
         {
             UCLoading loading = new UCLoading();
             guna2Panel1.Controls.Add(loading);
-            
+
         }
         private void frmLoading_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

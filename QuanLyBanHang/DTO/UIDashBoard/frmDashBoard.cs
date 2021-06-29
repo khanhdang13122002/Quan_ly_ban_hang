@@ -1,17 +1,17 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
+﻿using QuanLyBanHang.DTO.UIAnalytics;
+using QuanLyBanHang.DTO.UIHistories;
+using QuanLyBanHang.DTO.UILoading;
 using QuanLyBanHang.DTO.UIProducts;
+using QuanLyBanHang.DTO.UISetting;
+using QuanLyBanHang.DTO.UIUsers;
 using QuanLyBanHang.Models.DAO;
 using QuanLyBanHang.Models.EF;
-using QuanLyBanHang.DTO.UIAnalytics;
+using System;
 using System.Drawing;
-using QuanLyBanHang.DTO.UIHistories;
 using System.IO;
-using QuanLyBanHang.DTO.UIUsers;
-using QuanLyBanHang.DTO.UILoading;
+using System.Runtime.InteropServices;
 using System.Threading;
-using QuanLyBanHang.DTO.UISetting;
+using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UIDashBoard
 {
@@ -42,17 +42,14 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             loadUcAnallytics();
             loadUserData(userId);
         }
-
-
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        public void pnlNav(int location_,int height) {
+        public void pnlNav(int location_, int height)
+        {
             this.plnActiveNav.Top = location_;
             this.plnActiveNav.Height = height;
-            
         }
         void loadUcAnallytics()
         {
@@ -66,19 +63,18 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            pnlNav(btnAnalytics.Top,btnAnalytics.Height);
+            pnlNav(btnAnalytics.Top, btnAnalytics.Height);
             Active = btnAnalytics.Name;
-            loadUcAnallytics(); 
-            
+            loadUcAnallytics();
+
         }
-       
         private void btnProucts_Click(object sender, EventArgs e)
         {
             loadProduct(null);
         }
         public void loadProduct(string key)
         {
-            UCProducts ucPro = new UCProducts(key,auth_id);
+            UCProducts ucPro = new UCProducts(key, auth_id);
             pnlNav(btnProucts.Top, btnProucts.Height);
             Active = btnProucts.Name;
             plnContent_.Controls.Clear();
@@ -120,16 +116,17 @@ namespace QuanLyBanHang.DTO.UIDashBoard
         private void btnSetting_Click(object sender, EventArgs e)
         {
             pnlNav(btnSetting.Top, btnSetting.Height);
-            frmSetting frm = new frmSetting(auth_id);
-            frm.UserID = auth_id;
-            frm.ShowDialog();
+            UCSetting setting = new UCSetting();
+            plnContent_.Controls.Clear();
+            plnContent_.Controls.Add(setting);
         }
-        void loadUserData(int user_id) {
+        void loadUserData(int user_id)
+        {
             User user_ = dashDao.getUser(user_id);
             lblUserName.Text = user_.UserName;
             if (user_.Avatar != null)
             {
-                ptbAvatar.Image =  ByteArrayToImage(user_.Avatar);
+                ptbAvatar.Image = ByteArrayToImage(user_.Avatar);
             }
         }
         public Image ByteArrayToImage(byte[] byteArr)
@@ -146,10 +143,6 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             {
                 return null;
             }
-
-        }
-        private void plnNavbarTop_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -173,7 +166,8 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             }
             else
             {
-                if (Active.Contains(btnProucts.Name)) {
+                if (Active.Contains(btnProucts.Name))
+                {
                     plnContent_.Controls.Clear();
                     loadProduct(null);
                 }

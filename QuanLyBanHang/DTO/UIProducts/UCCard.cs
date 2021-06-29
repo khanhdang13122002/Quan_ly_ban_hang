@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using QuanLyBanHang.Models.DAO;
+using QuanLyBanHang.Models.EF;
+using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyBanHang.Models.EF;
-using QuanLyBanHang.Models.DAO;
 
 
 namespace QuanLyBanHang.DTO.UIProducts
@@ -30,7 +24,7 @@ namespace QuanLyBanHang.DTO.UIProducts
              int nHeightEllipse
 
        );
-        public UCCard(product products,int id)
+        public UCCard(product products, int id)
         {
             InitializeComponent();
             id_ = id;
@@ -51,14 +45,14 @@ namespace QuanLyBanHang.DTO.UIProducts
                 lblPrices.Location = new Point((this.Width - lblPrices.Width) / 2, 146);
                 loadImage(products.image_);
             }
-           
+
             //load data of products
-            
+
         }
-        
+
         void loadEditForm(product product)
         {
-            frmProductsEditor frm = new frmProductsEditor(product, false,id_);
+            frmProductsEditor frm = new frmProductsEditor(product, false, id_);
             frm.FormClosed += new FormClosedEventHandler(frm_Closed);
             frm.Show();
 
@@ -68,24 +62,24 @@ namespace QuanLyBanHang.DTO.UIProducts
         {
             ptbPic.Image = ByteArrayToImage(img);
         }
-        
+
         private void frm_Closed(object sender, FormClosedEventArgs e)
         {
-         ProductsDAO prdDao = new ProductsDAO();
+            ProductsDAO prdDao = new ProductsDAO();
 
-        LoadData(prdDao.GetProductById(prd.productId));
+            LoadData(prdDao.GetProductById(prd.productId));
         }
 
         private void UCCard_Click(object sender, EventArgs e)
         {
             /*khi click thi se goi update*/
             //some action here.
-         ProductsDAO prdDao = new ProductsDAO();
+            ProductsDAO prdDao = new ProductsDAO();
 
-        loadEditForm(prdDao.GetProductById(prd.productId));
+            loadEditForm(prdDao.GetProductById(prd.productId));
 
         }
-    /*    chuyen byte sang image de show*/
+        /*    chuyen byte sang image de show*/
         public Image ByteArrayToImage(byte[] byteArr)
         {
             if (byteArr != null)

@@ -87,3 +87,5 @@ C:\IT\dot_net\winform\github\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanH
 >>>>>>> a39c55cee8365e3f5d385162d893a56e0aa7845e
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UIHistories.UCHistory.resources
 D:\csharp\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UISetting.frmSetting.resources
+C:\IT\dot_net\winform\github\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UISetting.frmSetting.resources
+C:\IT\dot_net\winform\github\Quan_ly_ban_hang\QuanLyBanHang\obj\Debug\QuanLyBanHang.DTO.UISetting.UCSetting.resources

@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuanLyBanHang.Models.DAO;
+using System;
 using System.Windows.Forms;
-using QuanLyBanHang.Models.DAO;
-using QuanLyBanHang.Models.EF;
 
 namespace QuanLyBanHang.DTO.UIHistories
 {

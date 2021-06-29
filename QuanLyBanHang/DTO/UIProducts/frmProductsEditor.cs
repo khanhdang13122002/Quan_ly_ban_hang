@@ -1,44 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyBanHang.Models.EF;
+﻿using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
+using QuanLyBanHang.Models.EF;
+using System;
+using System.Drawing;
 using System.IO;
-using QuanLyBanHang.DTO.UIMessage;
+using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UIProducts
 {
     public partial class frmProductsEditor : Form
     {
-        protected bool isAdd_=true;
+        protected bool isAdd_ = true;
         protected int id_;
         protected product product_;
         protected ProductsDAO prdDao_ = new ProductsDAO();
         protected frmSuccess success = new frmSuccess();
         protected frmError erorr = new frmError();
 
-        public frmProductsEditor(product prd,bool isAdd,int id)
+        public frmProductsEditor(product prd, bool isAdd, int id)
         {
             InitializeComponent();
             id_ = id;
             if (isAdd)
             {
                 lblTitle.Text = "Thêm";
-              
-                btnAdd.Location = new Point((this.Width - btnAdd.Width) / 2,478);
+
+                btnAdd.Location = new Point((this.Width - btnAdd.Width) / 2, 478);
             }
             else
             {
                 loadData(prd);
                 lblTitle.Text = "Sửa Sản Phẩm";
                 btnAdd.Text = "Sửa";
-                btnAdd.Location = new Point((this.Width - btnAdd.Width)/2, 478);
+                btnAdd.Location = new Point((this.Width - btnAdd.Width) / 2, 478);
                 isAdd_ = false;
 
             }
@@ -65,8 +59,8 @@ namespace QuanLyBanHang.DTO.UIProducts
             txtDeitail.Text = products.detail;
             txtName.Text = products.name;
             txtPrices.Text = products.prices.ToString();
-            ptbProductPic.Image =ByteArrayToImage(products.image_);
-            
+            ptbProductPic.Image = ByteArrayToImage(products.image_);
+
         }
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
@@ -80,10 +74,10 @@ namespace QuanLyBanHang.DTO.UIProducts
                     filePath = open.FileName;
                     ptbProductPic.Image = Image.FromFile(filePath);
                 }
-               
+
             }
         }
-       
+
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -104,9 +98,10 @@ namespace QuanLyBanHang.DTO.UIProducts
         public void add()
         {
             int id = prdDao_.getMaxId();
-            product prd = new product {
+            product prd = new product
+            {
 
-                productId = id+1,
+                productId = id + 1,
                 name = txtName.Text.Trim(),
                 prices = int.Parse(txtPrices.Text.Trim()),
                 categoryId = int.Parse(cbbCategory.SelectedValue.ToString()),
@@ -114,7 +109,7 @@ namespace QuanLyBanHang.DTO.UIProducts
                 image_ = ConvertImage(ptbProductPic.Image),
                 userId = null
             };
-            bool checkAdd = prdDao_.add(prd,id_);
+            bool checkAdd = prdDao_.add(prd, id_);
             if (checkAdd)
             {
                 success.show_("Thêm Thành Công");
@@ -136,7 +131,7 @@ namespace QuanLyBanHang.DTO.UIProducts
                 image_ = ConvertImage(ptbProductPic.Image),
                 userId = null
             };
-            bool checkUpdate = prdDao_.update(prd,id_);
+            bool checkUpdate = prdDao_.update(prd, id_);
             if (checkUpdate)
             {
                 if (success.show_("Sửa Thành Công") == DialogResult.OK) { this.Close(); };
