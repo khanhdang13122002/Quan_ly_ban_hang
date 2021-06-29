@@ -1,13 +1,6 @@
 ﻿using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UIUsers
@@ -17,7 +10,7 @@ namespace QuanLyBanHang.DTO.UIUsers
         int id_;
         protected frmSuccess msbSuccess = new frmSuccess();
         protected frmError mbsErr = new frmError();
-        public UCUser(int id,string key)
+        public UCUser(int id, string key)
         {
             id_ = id;
             InitializeComponent();
@@ -31,13 +24,13 @@ namespace QuanLyBanHang.DTO.UIUsers
         // Load danh sách user
         private void LoadData(string key)
         {
-                UsersDAO dao = new UsersDAO();
-                gnDgvUsers.DataSource = dao.GetAll(key);
+            UsersDAO dao = new UsersDAO();
+            gnDgvUsers.DataSource = dao.GetAll(key);
         }
 
         private void gnBtnSearch_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void gnBtnAdd_Click(object sender, EventArgs e)
@@ -62,7 +55,7 @@ namespace QuanLyBanHang.DTO.UIUsers
         {
             UsersDAO dao = new UsersDAO();
             int getID = (int)gnDgvUsers.CurrentRow.Cells["userId"].Value;
-            if (dao.Delete(getID,id_))
+            if (dao.Delete(getID, id_))
             {
                 msbSuccess.show_("Xóa Thành Công");
                 gnDgvUsers.DataSource = dao.GetAll(null);

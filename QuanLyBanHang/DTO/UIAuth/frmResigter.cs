@@ -1,9 +1,9 @@
-﻿using QuanLyBanHang.DTO.UIMessage;
+﻿using QuanLyBanHang.DTO.UILoading;
+using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
 using System;
 using System.Threading;
 using System.Windows.Forms;
-using QuanLyBanHang.DTO.UILoading;
 namespace QuanLyBanHang.DTO.UIAuth
 
 {
@@ -15,7 +15,7 @@ namespace QuanLyBanHang.DTO.UIAuth
         protected AuthDAO auth = new AuthDAO();
         public frmResigter()
         {
-           
+
             InitializeComponent();
         }
 

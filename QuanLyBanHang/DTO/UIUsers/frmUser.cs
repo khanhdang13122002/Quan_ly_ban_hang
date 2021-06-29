@@ -3,15 +3,9 @@ using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
 using QuanLyBanHang.Models.EF;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UIUsers
@@ -62,7 +56,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             if (!String.IsNullOrEmpty(data.Text))
             {
                 mark = true;
-            } else
+            }
+            else
             {
                 epError.SetError(data, "Hãy điền đầy đủ thông tin");
                 data.Focus();
@@ -82,7 +77,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             {
                 epError.SetError(data, "Email này đã tồn tại!");
                 data.Focus();
-            } else
+            }
+            else
             {
                 mark = true;
             }
@@ -100,7 +96,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             {
                 epError.SetError(data, "Email của bạn sai định dạng!");
                 data.Focus();
-            } else
+            }
+            else
             {
                 mark = true;
             }
@@ -118,7 +115,8 @@ namespace QuanLyBanHang.DTO.UIUsers
             {
                 epError.SetError(data, "Số điện thoại cá nhân của bạn không phù hợp!");
                 data.Focus();
-            } else
+            }
+            else
             {
                 mark = true;
             }
@@ -148,7 +146,8 @@ namespace QuanLyBanHang.DTO.UIUsers
                     Image img = Image.FromStream(ms);
                     return img;
                 }
-            } else
+            }
+            else
             {
                 return null;
             }
@@ -172,11 +171,13 @@ namespace QuanLyBanHang.DTO.UIUsers
                     txtDesc_.Text = info.Desc_;
                     // Avatar
                     ptbAvatar.Image = ByteArrayToImage(info.Avatar);
-                } else
+                }
+                else
                 {
                     this.Close();
                 }
-            } else
+            }
+            else
             {
                 lblTitle.Text = "Thêm người dùng";
             }
@@ -207,12 +208,13 @@ namespace QuanLyBanHang.DTO.UIUsers
         {
             UsersDAO dao = new UsersDAO();
             var getInfo = InitUser();
-            if (dao.Update(getInfo,UserId))
+            if (dao.Update(getInfo, UserId))
             {
                 msbSuccess.show_("Sửa Thành Công");
                 result = true;
                 this.Close();
-            } else
+            }
+            else
             {
                 mbsErr.show_("Sửa Thất Bại");
             }
@@ -225,22 +227,24 @@ namespace QuanLyBanHang.DTO.UIUsers
             var getInfo = InitUser();
             if (isAdd)
             {
-                if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress) 
+                if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress)
                     && CheckEmptyData(txtPhoneNumber) && FormatEmail(txtEmail) && CheckEmail(txtEmail)
                     && FormatPhonenumber(txtPhoneNumber))
                 {
                     epError.Clear();
-                    if (dao.InsertNewUser(getInfo,UserId))
+                    if (dao.InsertNewUser(getInfo, UserId))
                     {
                         msbSuccess.show_("Thêm Thành Công");
                         result = true;
                         this.Close();
-                    } else
+                    }
+                    else
                     {
                         mbsErr.show_("Thêm Thất Bại");
                     }
                 }
-            } else
+            }
+            else
             {
                 User temp = dao.GetSingleByID(userId);
                 if (CheckEmptyData(txtUserName) && CheckEmptyData(txtEmail) && CheckEmptyData(txtAddress)
@@ -250,7 +254,8 @@ namespace QuanLyBanHang.DTO.UIUsers
                     if (txtEmail.Text == temp.Email.Trim())
                     {
                         CallUpdateFunc();
-                    } else
+                    }
+                    else
                     {
                         if (FormatEmail(txtEmail) && CheckEmail(txtEmail))
                         {

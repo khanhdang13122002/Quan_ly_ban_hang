@@ -255,7 +255,6 @@ namespace QuanLyBanHang.DTO.UIDashBoard
             this.plnNavbarTop.ShadowDecoration.Parent = this.plnNavbarTop;
             this.plnNavbarTop.Size = new System.Drawing.Size(951, 44);
             this.plnNavbarTop.TabIndex = 1;
-            this.plnNavbarTop.Paint += new System.Windows.Forms.PaintEventHandler(this.plnNavbarTop_Paint);
             // 
             // lblUserName
             // 

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using QuanLyBanHang.Models.EF;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyBanHang.Models.EF;
 
 namespace QuanLyBanHang.Models.DAO
 {
-    public class AnalyticsDAO:BaseDao
+    public class AnalyticsDAO : BaseDao
     {
 
         public int getCountProducts()
@@ -26,13 +22,13 @@ namespace QuanLyBanHang.Models.DAO
         {
             return db_.histories.Count();
         }
-       /* ham tinh toan thoi gian*/
-    
-           
-       /*lay lich su gan nhat theo time va truong*/
+        /* ham tinh toan thoi gian*/
+
+
+        /*lay lich su gan nhat theo time va truong*/
         public history getLastUpdatedOfProucts()
         {
-            return db_.histories.OrderByDescending(his => his.time).Where(his=>his.isProduct==true).FirstOrDefault();
+            return db_.histories.OrderByDescending(his => his.time).Where(his => his.isProduct == true).FirstOrDefault();
         }
         public history getLastUpdateOfUser()
         {

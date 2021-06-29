@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyBanHang.Models.DAO;
+﻿using QuanLyBanHang.Models.DAO;
 using QuanLyBanHang.Models.EF;
+using System;
+using System.Windows.Forms;
 
 namespace QuanLyBanHang.DTO.UIAnalytics
 {
@@ -19,7 +11,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         public UCAnalytics(int auth_id)
         {
             InitializeComponent();
-           /* animation*/
+            /* animation*/
             this.cpbOrderPrecent.Value = 0;
             this.cpbProductsPercent.Value = 0;
             /* animation*/
@@ -41,7 +33,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         /* animation*/
         public void loadData()
         {
-           /* Load du lieu*/
+            /* Load du lieu*/
             lblTotalProducts.Text = analyticsDao.getCountProducts().ToString();
             lblTotalUsers.Text = analyticsDao.getCountUsers().ToString();
             lblOrderTotal.Text = analyticsDao.getCountOrder().ToString();
@@ -65,10 +57,9 @@ namespace QuanLyBanHang.DTO.UIAnalytics
             var his = analyticsDao.getLastUpdateOfOrder();
             lblOrderHis.Text = his.time.ToString();
         }
-        public void loadNote(int id) { 
-        
-            
-
+        public void loadNote(int id)
+        {
+            //chưa cập nhât
         }
         void His()
         {
@@ -82,7 +73,7 @@ namespace QuanLyBanHang.DTO.UIAnalytics
         {
             loadData();
         }
-  /*      animation thooi*/
+        /*      animation thooi*/
         private void productTimer_Tick(object sender, EventArgs e)
         {
             cpbProductsPercent.Value += 1;

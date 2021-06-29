@@ -1,12 +1,11 @@
 ﻿using QuanLyBanHang.DTO.UIDashBoard;
+using QuanLyBanHang.DTO.UILoading;
 using QuanLyBanHang.DTO.UIMessage;
 using QuanLyBanHang.Models.DAO;
-using System;
-using System.Windows.Forms;
 using QuanLyBanHang.Models.EF;
-using System.Threading.Tasks;
-using QuanLyBanHang.DTO.UILoading;
+using System;
 using System.Threading;
+using System.Windows.Forms;
 
 
 namespace QuanLyBanHang.DTO.UIAuth
@@ -40,7 +39,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             frmLoading load_ = new frmLoading();
             load_.ShowDialog();
         }
-       
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -56,10 +55,11 @@ namespace QuanLyBanHang.DTO.UIAuth
                 Thread thr = new Thread(AddLoad);
                 thr.Start();
                 Auth checkLogin = auth.login(user_name, pass_);
-                if (checkLogin!=null)
+                if (checkLogin != null)
                 {
                     thr.Abort();
-                    if (msbSuccess.show_("Đăng Nhập Thành Công") == DialogResult.OK) { 
+                    if (msbSuccess.show_("Đăng Nhập Thành Công") == DialogResult.OK)
+                    {
                         showDashBoard((int)checkLogin.userId);
                     };
 
