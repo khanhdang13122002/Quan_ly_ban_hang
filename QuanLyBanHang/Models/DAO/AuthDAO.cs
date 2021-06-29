@@ -14,7 +14,7 @@ namespace QuanLyBanHang.Models.DAO
         {
             try
             {
-                Auth user_ = db_.Auths.Where(au => au.username.Contains(username) && au.password_.Contains(password)).FirstOrDefault();
+                Auth user_ = db_.Auths.Where(au => au.username==username && au.password_==password).FirstOrDefault();
 
                 if (user_ != null)
                 {
@@ -51,7 +51,7 @@ namespace QuanLyBanHang.Models.DAO
             {
                 int maxAuthId = getMaxAuthId();
                 int maxUserId = getMaxUserId();
-                Auth user_ = db_.Auths.Where(au => au.username.Contains(user)).FirstOrDefault();
+                Auth user_ = db_.Auths.Where(au => au.username==user).FirstOrDefault();
 
                 if (user_ == null)
                 {

@@ -304,6 +304,7 @@ namespace QuanLyBanHang.DTO.UIAuth
             this.Brand.TabIndex = 18;
             this.Brand.TabStop = false;
             this.Brand.UseTransparentBackground = true;
+            this.Brand.Click += new System.EventHandler(this.Brand_Click);
             // 
             // frmLogin
             // 

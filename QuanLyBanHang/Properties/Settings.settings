@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=KHANHH-PC\KHANH;Initial Catalog=QuanLyBanHang;User ID=sa;Password=13122002;MultipleActiveResultSets=True;Application Name=EntityFramework</Value>
     </Setting>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

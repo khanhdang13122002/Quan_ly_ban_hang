@@ -26,6 +26,12 @@ namespace QuanLyBanHang.DTO.UIAuth
 
         private void frmAuth_Load(object sender, EventArgs e)
         {
+            if ((bool)Properties.Settings.Default["FirstRun"] == true)
+            {
+                Properties.Settings.Default["FirstRun"] = false;
+                Properties.Settings.Default.Save();
+                this.ShowDialog();
+            }
             this.ActiveControl = txtUserName;
             this.AcceptButton = btnLogin;
         }
@@ -103,6 +109,11 @@ namespace QuanLyBanHang.DTO.UIAuth
         private void frmLogin_KeyDown(object sender, KeyEventArgs e)
         {
             /*txtUserName.Focus();*/
+        }
+
+        private void Brand_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
