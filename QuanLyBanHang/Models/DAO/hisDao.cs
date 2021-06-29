@@ -1,21 +1,19 @@
-﻿using System;
+﻿using QuanLyBanHang.Models.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyBanHang.Models.EF;
 
 namespace QuanLyBanHang.Models.DAO
 {
-   public class hisDao:BaseDao
+    public class hisDao : BaseDao
     {
         public List<history> getAll()
         {
-            return db_.histories.OrderByDescending(his=>his.time).ToList();
+            return db_.histories.OrderByDescending(his => his.time).ToList();
         }
         public List<history> getAllByProducts()
         {
-            return db_.histories.OrderByDescending(his => his.time).Where(his=>his.isProduct==true).ToList();
+            return db_.histories.OrderByDescending(his => his.time).Where(his => his.isProduct == true).ToList();
         }
         public List<history> getAllByUsers()
         {
@@ -38,7 +36,8 @@ namespace QuanLyBanHang.Models.DAO
                 db_.SaveChanges();
                 return true;
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }

@@ -138,6 +138,12 @@
     <Compile Include="DTO\UIProducts\UCProducts.Designer.cs">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\UISetting\UCSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DTO\UISetting\UCSetting.Designer.cs">
+      <DependentUpon>UCSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\UIUsers\frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIProducts\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTO\UISetting\UCSetting.resx">
+      <DependentUpon>UCSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DTO\UIUsers\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
@@ -378,6 +387,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\mechanical-gears- %281%29.png" />
+    <None Include="Resources\mechanical-gears-.png" />
     <None Include="Resources\rubbish %281%29.png" />
     <None Include="Resources\right-arrow.png" />
     <None Include="Resources\left-arrow.png" />

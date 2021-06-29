@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyBanHang.Models.DAO
 {
@@ -18,7 +16,7 @@ namespace QuanLyBanHang.Models.DAO
             }
             return db_.Users.ToList();
         }
-        public List<User>getUsersByKey(string key)
+        public List<User> getUsersByKey(string key)
         {
             return db_.Users.Where(us => us.UserName.Contains(key) || us.Email.Contains(key) || us.Address_.Contains(key)).ToList();
         }
@@ -49,14 +47,15 @@ namespace QuanLyBanHang.Models.DAO
         }
 
         // Thêm user mới vào db
-        public bool InsertNewUser(User info,int id)
+        public bool InsertNewUser(User info, int id)
         {
             try
             {
                 db_.Users.Add(info);
                 addHis(id, "Them Nguoi Dung", true);
                 db_.SaveChanges();
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
@@ -64,7 +63,7 @@ namespace QuanLyBanHang.Models.DAO
         }
 
         // Update thông tin user
-        public bool Update(User info,int id)
+        public bool Update(User info, int id)
         {
             try
             {
@@ -81,7 +80,8 @@ namespace QuanLyBanHang.Models.DAO
 
                     db_.SaveChanges();
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
@@ -92,7 +92,7 @@ namespace QuanLyBanHang.Models.DAO
             return db_.Auths.Where(au => au.userId == userId).FirstOrDefault();
         }
         // Xóa user theo id
-        public bool Delete(int userID,int id)
+        public bool Delete(int userID, int id)
         {
             try
             {
@@ -110,7 +110,8 @@ namespace QuanLyBanHang.Models.DAO
                 {
                     return false;
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }

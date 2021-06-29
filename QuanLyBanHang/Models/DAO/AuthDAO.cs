@@ -1,6 +1,6 @@
-﻿using System;
+﻿using QuanLyBanHang.Models.EF;
+using System;
 using System.Linq;
-using QuanLyBanHang.Models.EF;
 namespace QuanLyBanHang.Models.DAO
 {
     public class AuthDAO : BaseDao
@@ -8,6 +8,11 @@ namespace QuanLyBanHang.Models.DAO
         public User getUserById(string id)
         {
             return db_.Users.Where(us => us.userId == int.Parse(id)).FirstOrDefault();
+        }
+
+        public Auth GetAuthByID(int id)
+        {
+            return db_.Auths.Where(t => t.authId == id).FirstOrDefault();
         }
 
         public Auth login(string username, string password)
@@ -44,7 +49,7 @@ namespace QuanLyBanHang.Models.DAO
             int id = authMax.authId;
             return id;
         }
-       
+
         public bool resigter(string user, string pass)
         {
             try
@@ -86,6 +91,55 @@ namespace QuanLyBanHang.Models.DAO
                     return false;
                 }
 
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Update(Auth info, int id)
+        {
+            try
+            {
+                var getAuth = GetAuthByID(id);
+                if (getAuth != null)
+                {
+                    getAuth.username = info.username;
+                    getAuth.password_ = info.password_;
+                    addHis(id, "Sua Nguoi Dung", true);
+
+                    db_.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool addHis(int user_id, string action_, bool isUsers_)
+        {
+            try
+            {
+                hisDao hisDao_ = new hisDao();
+                DateTime time_ = DateTime.Now;
+                int hisId = hisDao_.getMaxId();
+                history newHis = new history
+                {
+                    historyId = hisId + 1,
+                    time = time_,
+                    userId = user_id,
+                    action = action_,
+                    isUser = isUsers_
+                };
+                bool result = hisDao_.addHis(newHis);
+                if (result)
+                {
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
