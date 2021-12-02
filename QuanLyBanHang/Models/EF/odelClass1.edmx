@@ -401,7 +401,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyBanHangEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanLyBanHangEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Auths" EntityType="Self.Auth" />
           <EntitySet Name="categories" EntityType="Self.category" />
           <EntitySet Name="filters" EntityType="Self.filter" />
@@ -445,7 +445,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities3">
+        <EntityContainerMapping StorageEntityContainer="QuanLyBanHangModelStoreContainer" CdmEntityContainer="QuanLyBanHangEntities">
           <EntitySetMapping Name="Auths">
             <EntityTypeMapping TypeName="QuanLyBanHangModel.Auth">
               <MappingFragment StoreEntitySet="Auth">

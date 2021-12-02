@@ -132,46 +132,46 @@
     <Compile Include="Models\DAO\DashBoardDAO.cs" />
     <Compile Include="Models\DAO\ProductsDAO.cs" />
     <Compile Include="Models\EF\Auth.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\category.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\filter.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\history.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EF\Model1.Context.cs">
+    <Compile Include="Models\EF\odelClass1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>odelClass1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EF\Model1.cs">
+    <Compile Include="Models\EF\odelClass1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EF\Model1.Designer.cs">
+    <Compile Include="Models\EF\odelClass1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>odelClass1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\order_.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\tag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\User.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>odelClass1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,12 +218,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Models\EF\Model1.edmx">
+    <EntityDeploy Include="Models\EF\odelClass1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>odelClass1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\EF\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Models\EF\odelClass1.edmx.diagram">
+      <DependentUpon>odelClass1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -299,15 +299,15 @@
     <None Include="Resources\box.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\EF\Model1.Context.tt">
+    <Content Include="Models\EF\odelClass1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>odelClass1.edmx</DependentUpon>
+      <LastGenOutput>odelClass1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\EF\Model1.tt">
+    <Content Include="Models\EF\odelClass1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>odelClass1.edmx</DependentUpon>
+      <LastGenOutput>odelClass1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

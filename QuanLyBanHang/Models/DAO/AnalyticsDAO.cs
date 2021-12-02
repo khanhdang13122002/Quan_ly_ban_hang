@@ -59,10 +59,7 @@ namespace QuanLyBanHang.Models.DAO
                 }
             }
 
-            int day = int.Parse(day_now) - int.Parse(day_his);
-            int month = int.Parse(month_now) - int.Parse(month_his);
-            int year = int.Parse(year_now) - int.Parse(year_his);
-            int[] time_ = {day,month,year};
+            int[] time_ = {19,02,2002};
             return time_;
         }
        /*lay lich su gan nhat theo time va truong*/

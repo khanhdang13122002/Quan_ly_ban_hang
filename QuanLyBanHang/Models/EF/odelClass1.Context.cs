@@ -13,10 +13,10 @@ namespace QuanLyBanHang.Models.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLyBanHangEntities3 : DbContext
+    public partial class QuanLyBanHangEntities : DbContext
     {
-        public QuanLyBanHangEntities3()
-            : base("name=QuanLyBanHangEntities3")
+        public QuanLyBanHangEntities()
+            : base("name=QuanLyBanHangEntities")
         {
         }
     
